@@ -16,6 +16,9 @@
 		A049471C25BA41CE0019E566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A049471A25BA41CE0019E566 /* LaunchScreen.storyboard */; };
 		A049472725BA41CF0019E566 /* IncidentTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049472625BA41CF0019E566 /* IncidentTableViewTests.swift */; };
 		A049473225BA41CF0019E566 /* IncidentTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049473125BA41CF0019E566 /* IncidentTableViewUITests.swift */; };
+		A049474325BA421D0019E566 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474225BA421D0019E566 /* Incident.swift */; };
+		A049474825BA471A0019E566 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474725BA471A0019E566 /* CustomCell.swift */; };
+		A049474D25BA489C0019E566 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474C25BA489C0019E566 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		A049472D25BA41CF0019E566 /* IncidentTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncidentTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A049473125BA41CF0019E566 /* IncidentTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTableViewUITests.swift; sourceTree = "<group>"; };
 		A049473325BA41CF0019E566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A049474225BA421D0019E566 /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
+		A049474725BA471A0019E566 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A049474C25BA489C0019E566 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				A049470E25BA41CA0019E566 /* SceneDelegate.swift */,
 				A049471025BA41CA0019E566 /* ViewController.swift */,
 				A049471225BA41CA0019E566 /* Main.storyboard */,
+				A049474725BA471A0019E566 /* CustomCell.swift */,
+				A049474C25BA489C0019E566 /* ViewController2.swift */,
+				A049474225BA421D0019E566 /* Incident.swift */,
 				A049471825BA41CE0019E566 /* Assets.xcassets */,
 				A049471A25BA41CE0019E566 /* LaunchScreen.storyboard */,
 				A049471D25BA41CE0019E566 /* Info.plist */,
@@ -261,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A049474D25BA489C0019E566 /* ViewController2.swift in Sources */,
 				A049471125BA41CA0019E566 /* ViewController.swift in Sources */,
 				A049470D25BA41CA0019E566 /* AppDelegate.swift in Sources */,
 				A049470F25BA41CA0019E566 /* SceneDelegate.swift in Sources */,
 				A049471725BA41CA0019E566 /* IncidentTableView.xcdatamodeld in Sources */,
+				A049474825BA471A0019E566 /* CustomCell.swift in Sources */,
+				A049474325BA421D0019E566 /* Incident.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
