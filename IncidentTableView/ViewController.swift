@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! ViewController2
         nvc.incidents.append(Incident(inc: btnType))
+        nvc.btnType = self.btnType
         }
     
     
