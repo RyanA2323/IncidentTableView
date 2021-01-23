@@ -1,13 +1,19 @@
 //
-//  CustomCell.swift
+//  CustomCellTableViewCell.swift
 //  IncidentTableView
 //
-//  Created by Tiger Coder on 1/21/21.
+//  Created by Tiger Coder on 1/23/21.
 //
 
-import Foundation
 import UIKit
-class CutsomCell : UITableViewCell {
+
+class CustomCell: UITableViewCell {
+
+    @IBOutlet weak var imageIcon: UIImageView!
+    @IBOutlet weak var incidentLabel: UILabel!
     
-    
+    func configure(pic: UIImage, incident: String) {
+        incidentLabel.text = incident
+        imageIcon.image = pic
+    }
 }

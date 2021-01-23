@@ -11,9 +11,9 @@ enum typeIncident {
 }
 
 class Incident{
+    var type : String
     
-    var type : typeIncident
-    init() {
-        type = .other
+    init(inc: typeIncident) {
+        type = "\(inc)"
     }
 }
