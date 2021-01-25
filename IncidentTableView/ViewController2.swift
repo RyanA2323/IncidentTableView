@@ -32,8 +32,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         } else if btnType == .fight {
             cell.configure(pic: UIImage(named: "fist")!, incident: incidents[0].type)
         } else if btnType == .medical {
-            //dont have these pictures yet so I just made them another one I had
-            cell.configure(pic: UIImage(named: "weirdPerson")!, incident: incidents[0].type)
+            cell.configure(pic: UIImage(named: "starOfLife")!, incident: incidents[0].type)
         } else {
             cell.configure(pic: UIImage(named: "weirdPerson")!, incident: incidents[0].type)
         }
