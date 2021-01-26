@@ -19,6 +19,7 @@
 		A049473225BA41CF0019E566 /* IncidentTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049473125BA41CF0019E566 /* IncidentTableViewUITests.swift */; };
 		A049474325BA421D0019E566 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474225BA421D0019E566 /* Incident.swift */; };
 		A049474D25BA489C0019E566 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474C25BA489C0019E566 /* ViewController2.swift */; };
+		A049475B25C05D700019E566 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049475A25C05D700019E566 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A049473325BA41CF0019E566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A049474225BA421D0019E566 /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		A049474C25BA489C0019E566 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		A049475A25C05D700019E566 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				A049471025BA41CA0019E566 /* ViewController.swift */,
 				A049474225BA421D0019E566 /* Incident.swift */,
 				A049471225BA41CA0019E566 /* Main.storyboard */,
+				A049475A25C05D700019E566 /* ViewController3.swift */,
 				A048CFEA25BBF73800DC73B9 /* CustomCell.swift */,
 				A049474C25BA489C0019E566 /* ViewController2.swift */,
 				A049471825BA41CE0019E566 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 			files = (
 				A049474D25BA489C0019E566 /* ViewController2.swift in Sources */,
 				A049471125BA41CA0019E566 /* ViewController.swift in Sources */,
+				A049475B25C05D700019E566 /* ViewController3.swift in Sources */,
 				A049470D25BA41CA0019E566 /* AppDelegate.swift in Sources */,
 				A048CFEB25BBF73800DC73B9 /* CustomCell.swift in Sources */,
 				A049470F25BA41CA0019E566 /* SceneDelegate.swift in Sources */,

@@ -112,11 +112,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYs-Yi-VyL">
+                                                    <rect key="frame" x="204" y="5" width="38" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTR-MG-Wel">
+                                                    <rect key="frame" x="311" y="30" width="65" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Info"/>
+                                                    <connections>
+                                                        <segue destination="ZA2-LO-Edl" kind="show" id="5tv-eT-GKR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageIcon" destination="gN3-OE-ipg" id="zYU-2U-AuV"/>
                                             <outlet property="incidentLabel" destination="jBH-gy-oXl" id="glL-pI-JP5"/>
+                                            <outlet property="infoButton" destination="uTR-MG-Wel" id="8yO-uK-3z6"/>
+                                            <outlet property="timeLabel" destination="cYs-Yi-VyL" id="M1y-8O-lwz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,11 +146,44 @@
                     <navigationItem key="navigationItem" id="hzh-kh-5le"/>
                     <connections>
                         <outlet property="tableview" destination="0bl-g2-ElW" id="eXZ-YQ-Ccb"/>
+                        <segue destination="ZA2-LO-Edl" kind="show" id="Nol-uY-roE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VF6-5H-Lk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="79.891304347826093"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="DS5-zV-1Q6">
+            <objects>
+                <viewController id="ZA2-LO-Edl" customClass="ViewController3" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHf-l5-Enm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Additional information will be updated here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qFp-a2-fXA">
+                                <rect key="frame" x="0.0" y="111" width="414" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jTs-ux-Pbw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Euy-Ow-FMZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="cgr-vB-wVK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="refreshButtonOutlet" destination="cgr-vB-wVK" id="Mn9-9q-FH7"/>
+                        <outlet property="textViewOutlet" destination="qFp-a2-fXA" id="hkH-RH-tgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIZ-XC-6pP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459.4202898550725" y="100.2717391304348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J1d-EG-kK9">
@@ -153,7 +204,13 @@
             <point key="canvasLocation" x="18.840579710144929" y="79.891304347826093"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nol-uY-roE"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
