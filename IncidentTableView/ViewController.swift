@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var otherOutlet: UIButton!
     @IBOutlet weak var medicalOutlet: UIButton!
     var btnType: typeIncident!
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,19 @@ class ViewController: UIViewController {
     
     //error is in this func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection("incidents").addDocument(data: [
+            "type": btnType ?? "other",
+            "info": "AAAAA A FIGHT!!!"
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+
         let nvc = segue.destination as! ViewController2
         nvc.incidents.append(Incident(inc: btnType))
         nvc.btnType = self.btnType

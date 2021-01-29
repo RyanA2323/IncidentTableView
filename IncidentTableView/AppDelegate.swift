@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        _ = Firestore.firestore()
-        
         return true
     }
 

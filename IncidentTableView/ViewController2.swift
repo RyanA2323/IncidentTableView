@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -13,11 +14,24 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     var incidents: [Incident] = []
     var btnType: typeIncident = .other
     
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableview.delegate = self
         tableview.dataSource = self
+        
+        db.collection("incidents").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
