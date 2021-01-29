@@ -7,25 +7,40 @@
 
 import UIKit
 
-class ViewController3: UIViewController {
-    @IBOutlet weak var textViewOutlet: UITextView!
-    @IBOutlet weak var refreshButtonOutlet: UIBarButtonItem!
+class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+   
+    @IBOutlet weak var textfieldOutlet: UITextField!
+    @IBOutlet weak var tableview: UITableView!
+    
+    var info: [String] = ["mr seaver", "Eschman"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        tableview.delegate = self
+        tableview.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func addAction(_ sender: UIBarButtonItem) {
+        //need to make sure there is something in the text field
+        //maybe an alert
+        info.append(textfieldOutlet.text!)
+        tableview.reloadData()
     }
-    */
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return info.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "myCell")!
+        
+        cell.textLabel?.text = info[indexPath.row]
+        cell.textLabel?.numberOfLines = 2
+        return cell
+    }
 
 }

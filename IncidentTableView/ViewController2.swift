@@ -20,6 +20,12 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableview.dataSource = self
     }
     
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toVC3", sender: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incidents.count
     }

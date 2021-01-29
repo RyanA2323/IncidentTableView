@@ -13,8 +13,9 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var incidentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    func configure(pic: UIImage, incident: String) {
-        incidentLabel.text = incident
+    
+    func configure(pic: UIImage, incident: typeIncident) {
+        incidentLabel.text = "\(incident)"
         imageIcon.image = pic
         //time not included yet
     }
