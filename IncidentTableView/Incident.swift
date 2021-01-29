@@ -6,14 +6,17 @@
 //
 
 import Foundation
-enum typeIncident {
-    case fight, medical, shooter, other
+enum typeIncident: String {
+    case fight = "fight"
+    case medical = "medical"
+    case shooter = "shooter"
+    case other = "other"
 }
 
 class Incident{
-    var type : String
+    var type : typeIncident
     
     init(inc: typeIncident) {
-        type = "\(inc)"
+        type = inc
     }
 }
