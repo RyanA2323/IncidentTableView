@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    //comment2
     @IBAction func fightAction(_ sender: UIButton) {
         btnType = .fight
         performSegue(withIdentifier: "toTableView", sender: nil)

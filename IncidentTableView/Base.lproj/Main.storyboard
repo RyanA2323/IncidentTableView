@@ -132,24 +132,12 @@
                                                     <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTR-MG-Wel">
-                                                    <rect key="frame" x="311" y="30" width="65" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="Info">
-                                                        <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="ZA2-LO-Edl" kind="show" id="5tv-eT-GKR"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageIcon" destination="gN3-OE-ipg" id="zYU-2U-AuV"/>
                                             <outlet property="incidentLabel" destination="jBH-gy-oXl" id="glL-pI-JP5"/>
-                                            <outlet property="infoButton" destination="uTR-MG-Wel" id="8yO-uK-3z6"/>
                                             <outlet property="timeLabel" destination="cYs-Yi-VyL" id="M1y-8O-lwz"/>
                                         </connections>
                                     </tableViewCell>
@@ -162,7 +150,6 @@
                     <navigationItem key="navigationItem" id="hzh-kh-5le"/>
                     <connections>
                         <outlet property="tableview" destination="0bl-g2-ElW" id="eXZ-YQ-Ccb"/>
-                        <segue destination="ZA2-LO-Edl" kind="show" id="Nol-uY-roE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VF6-5H-Lk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,9 +207,6 @@
             <point key="canvasLocation" x="18.840579710144929" y="79.891304347826093"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nol-uY-roE"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
