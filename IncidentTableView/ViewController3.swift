@@ -13,7 +13,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var textfieldOutlet: UITextField!
     @IBOutlet weak var tableview: UITableView!
     
-    var info: [String] = ["mr seaver", "Eschman"]
+    var info: [String] = []
+    var ind: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,18 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         //maybe an alert
         info.append(textfieldOutlet.text!)
         tableview.reloadData()
+        textfieldOutlet.text = ""
+    }
+
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        ind = indexPath
+    }
+    
+    @IBAction func editAction(_ sender: UIBarButtonItem) {
+        tableview.cellForRow(at: ind)?.textLabel?.text = textfieldOutlet.text!
+        info[ind.row] = textfieldOutlet.text!
+        textfieldOutlet.text = ""
     }
     
     
@@ -40,6 +53,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         cell.textLabel?.text = info[indexPath.row]
         cell.textLabel?.numberOfLines = 2
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
 

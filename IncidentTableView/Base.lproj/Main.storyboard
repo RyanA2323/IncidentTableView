@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="79.891304347826093"/>
         </scene>
-        <!--View Controller3-->
+        <!--Incident Information-->
         <scene sceneID="DS5-zV-1Q6">
             <objects>
                 <viewController id="ZA2-LO-Edl" customClass="ViewController3" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +186,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.19649976490000001" green="0.21135562660000001" blue="0.23529773949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -200,12 +200,19 @@
                         <viewLayoutGuide key="safeArea" id="jTs-ux-Pbw"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Euy-Ow-FMZ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cgr-vB-wVK">
-                            <connections>
-                                <action selector="addAction:" destination="ZA2-LO-Edl" id="Yuc-Ha-2ol"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Incident Information" id="Euy-Ow-FMZ">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="add" id="cgr-vB-wVK">
+                                <connections>
+                                    <action selector="addAction:" destination="ZA2-LO-Edl" id="Yuc-Ha-2ol"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pencil" catalog="system" id="Yti-Xw-0BP">
+                                <connections>
+                                    <action selector="editAction:" destination="ZA2-LO-Edl" id="Ude-rj-cge"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="MRe-eA-zxr" id="Dne-m7-IQJ"/>
@@ -236,6 +243,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

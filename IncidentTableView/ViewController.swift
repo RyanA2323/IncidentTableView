@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     
-    //comment2
+    
     @IBAction func fightAction(_ sender: UIButton) {
         btnType = .fight
         performSegue(withIdentifier: "toTableView", sender: nil)

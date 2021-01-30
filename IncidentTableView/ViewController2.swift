@@ -12,6 +12,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableview: UITableView!
     var incidents: [Incident] = []
     var btnType: typeIncident = .other
+    var selectedIncident: Incident!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,14 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        selectedIncident = incidents[indexPath.row]
         performSegue(withIdentifier: "toVC3", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! ViewController3
+        nvc.info.append(" Location: \(selectedIncident.location) \n Level: \(selectedIncident.level)" )
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incidents.count
