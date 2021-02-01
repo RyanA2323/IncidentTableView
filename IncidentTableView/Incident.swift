@@ -5,6 +5,7 @@
 //  Created by Tiger Coder on 1/21/21.
 //
 
+//comment
 import Foundation
 enum typeIncident: String {
     case fight = "fight"
