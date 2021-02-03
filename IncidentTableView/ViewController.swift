@@ -6,61 +6,41 @@
 //
 
 import UIKit
-import Firebase
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var shooterOutlet: UIButton!
     @IBOutlet weak var fightOutlet: UIButton!
     @IBOutlet weak var otherOutlet: UIButton!
     @IBOutlet weak var medicalOutlet: UIButton!
-    var btnType: typeIncident!
-    
-    let db = Firestore.firestore()
+    var incidentMade = Incident(inc: .other)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func fightAction(_ sender: UIButton) {
-        btnType = .fight
+        incidentMade.type = .fight
         performSegue(withIdentifier: "toTableView", sender: nil)
     }
     @IBAction func shooterAction(_ sender: UIButton) {
-        btnType = .shooter
+        incidentMade.type = .shooter
         performSegue(withIdentifier: "toTableView", sender: nil)
     }
     @IBAction func medAction(_ sender: UIButton) {
-        btnType = .medical
+        incidentMade.type = .medical
         performSegue(withIdentifier: "toTableView", sender: nil)
     }
     @IBAction func otherAction(_ sender: UIButton) {
-        btnType = .other
+        incidentMade.type = .other
         performSegue(withIdentifier: "toTableView", sender: nil)
     }
     
     
     //error is in this func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        var ref: DocumentReference? = nil
-        ref = db.collection("incidents").addDocument(data: [
-            "type": btnType ?? "other",
-            "info": "AAAAA A FIGHT!!!"
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-
-        let nvc = segue.destination as! ViewController2
-        nvc.incidents.append(Incident(inc: btnType))
-        nvc.btnType = self.btnType
-        }
-    
-    
+        incidentMade.submit()
+    }
 }
 
