@@ -5,30 +5,38 @@
 //  Created by Tiger Coder on 1/21/21.
 //
 
-
 import Foundation
-enum typeIncident {
-    case fight
-    case medical
-    case shooter
-    case other
-}
+import Firebase
 
-enum treatLevel {
-    case low
-    case medium
-    case high
+let db = Firestore.firestore()
+
+enum typeIncident: String {
+    case fight = "Fight"
+    case medical =  "Medical"
+    case shooter =  "Shooter"
+    case other = "Other"
 }
 
 class Incident{
     var type : typeIncident
-    var location : String
-    var level : treatLevel
+    var info : String?
+    var key : String?
     
     init(inc: typeIncident) {
         type = inc
-        location = "location"
-        level = .low
     }
     
+    func submit(){
+        var ref: DocumentReference? = nil
+        ref = db.collection("incidents").addDocument(data: [
+            "type": type.rawValue,
+            "info": "AAAAA A FIGHT!!!"
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+    }
 }
