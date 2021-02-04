@@ -34,12 +34,14 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let incidentMade = Incident(inc: .other)
                     incidentMade.key = document.documentID
                     
-                    var returnList = [String]()
+                    var returnType = String()
                     for dt in document.data() {
-                        returnList.append(dt.value as! String)
+                        if dt.key == "type" {
+                        returnType = dt.value as! String
+                        }
                     }
                     
-                    switch returnList[1] {
+                    switch returnType {
                     case "Fight":
                         incidentMade.type = .fight
                     // print("changed to fight")
@@ -78,16 +80,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         case .medical: cell.configure(pic: UIImage(named: "starOfLife")!, incident: incidents[indexPath.row].type.rawValue)
         case .other: cell.configure(pic: UIImage(named: "weirdPerson")!, incident: incidents[indexPath.row].type.rawValue)
         }
-        
-        //        if incidents[indexPath.row].type == .shooter {
-        //            cell.configure(pic: UIImage(named: "activeShooter")!, incident: incidents[indexPath.row].type.rawValue)
-        //        } else if incidents[indexPath.row].type == .fight {
-        //            cell.configure(pic: UIImage(named: "fist")!, incident: incidents[indexPath.row].type.rawValue)
-        //        } else if incidents[indexPath.row].type == .medical {
-        //            cell.configure(pic: UIImage(named: "starOfLife")!, incident: incidents[indexPath.row].type.rawValue)
-        //        } else {
-        //            cell.configure(pic: UIImage(named: "weirdPerson")!, incident: incidents[indexPath.row].type.rawValue)
-        //        }
         
         return cell
     }
