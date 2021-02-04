@@ -126,23 +126,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Active Threat in Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-yg-BWj">
-                                <rect key="frame" x="47" y="66" width="321" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Active Threats in Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-yg-BWj">
+                                <rect key="frame" x="40" y="66" width="335" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhS-dR-y0M">
-                                <rect key="frame" x="128" y="630" width="158" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Repot New Information">
-                                    <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bl-g2-ElW">
-                                <rect key="frame" x="0.0" y="120" width="414" height="492"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="616"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -199,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="79.891304347826093"/>
         </scene>
-        <!--View Controller3-->
+        <!--Incident Information-->
         <scene sceneID="DS5-zV-1Q6">
             <objects>
                 <viewController id="ZA2-LO-Edl" customClass="ViewController3" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -208,9 +200,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MRe-eA-zxr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="bVH-HU-cdf" rowHeight="70" style="IBUITableViewCellStyleDefault" id="fv5-fb-WaN">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
@@ -223,35 +216,44 @@
                                                     <rect key="frame" x="20" y="0.0" width="374" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.19649976490000001" green="0.21135562660000001" blue="0.23529773949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Additional Information" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNd-vs-7co">
-                                <rect key="frame" x="20" y="682" width="374" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhS-dR-y0M">
+                                <rect key="frame" x="96" y="658" width="223" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Repot New Information">
+                                    <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jTs-ux-Pbw"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Euy-Ow-FMZ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cgr-vB-wVK">
-                            <connections>
-                                <action selector="addAction:" destination="ZA2-LO-Edl" id="Yuc-Ha-2ol"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Incident Information" id="Euy-Ow-FMZ">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="add" id="cgr-vB-wVK">
+                                <connections>
+                                    <action selector="addAction:" destination="ZA2-LO-Edl" id="Yuc-Ha-2ol"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pencil" catalog="system" id="Yti-Xw-0BP">
+                                <connections>
+                                    <action selector="editAction:" destination="ZA2-LO-Edl" id="Ude-rj-cge"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="MRe-eA-zxr" id="Dne-m7-IQJ"/>
-                        <outlet property="textfieldOutlet" destination="BNd-vs-7co" id="MYk-yZ-b7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIZ-XC-6pP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -450,6 +452,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -5,19 +5,30 @@
 //  Created by Tiger Coder on 1/21/21.
 //
 
-//comment
+
 import Foundation
-enum typeIncident: String {
-    case fight = "fight"
-    case medical = "medical"
-    case shooter = "shooter"
-    case other = "other"
+enum typeIncident {
+    case fight
+    case medical
+    case shooter
+    case other
+}
+
+enum treatLevel {
+    case low
+    case medium
+    case high
 }
 
 class Incident{
     var type : typeIncident
+    var location : String
+    var level : treatLevel
     
     init(inc: typeIncident) {
         type = inc
+        location = "location"
+        level = .low
     }
+    
 }
