@@ -25,6 +25,9 @@
 		A055216125C3283100D6DB56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A055216025C3283100D6DB56 /* GoogleService-Info.plist */; };
 		A055216225C3283100D6DB56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A055216025C3283100D6DB56 /* GoogleService-Info.plist */; };
 		A055216325C3283100D6DB56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A055216025C3283100D6DB56 /* GoogleService-Info.plist */; };
+		A0ABFEA325CC6E46005BE408 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFEA225CC6E46005BE408 /* ViewController4.swift */; };
+		A0ABFEA825CC6EB3005BE408 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFEA725CC6EB3005BE408 /* ViewController5.swift */; };
+		A0ABFEAD25CC6ED8005BE408 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFEAC25CC6ED8005BE408 /* ViewController6.swift */; };
 		F4451BC7A6FE8A21FE042B5D /* Pods_IncidentTableView_IncidentTableViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAB029D03BFB307DCB9CA3 /* Pods_IncidentTableView_IncidentTableViewUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		A049474C25BA489C0019E566 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		A049475A25C05D700019E566 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		A055216025C3283100D6DB56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0ABFEA225CC6E46005BE408 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		A0ABFEA725CC6EB3005BE408 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		A0ABFEAC25CC6ED8005BE408 /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		CCA669A636D257794C5C2392 /* Pods-IncidentTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IncidentTableView.debug.xcconfig"; path = "Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		D0672C1AE64BCC6BC87170A1 /* Pods-IncidentTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IncidentTableView.release.xcconfig"; path = "Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView.release.xcconfig"; sourceTree = "<group>"; };
 		E1BAB029D03BFB307DCB9CA3 /* Pods_IncidentTableView_IncidentTableViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IncidentTableView_IncidentTableViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +151,9 @@
 				A049471025BA41CA0019E566 /* ViewController.swift */,
 				A049474225BA421D0019E566 /* Incident.swift */,
 				A049471225BA41CA0019E566 /* Main.storyboard */,
+				A0ABFEAC25CC6ED8005BE408 /* ViewController6.swift */,
+				A0ABFEA725CC6EB3005BE408 /* ViewController5.swift */,
+				A0ABFEA225CC6E46005BE408 /* ViewController4.swift */,
 				A048CFEA25BBF73800DC73B9 /* CustomCell.swift */,
 				A049474C25BA489C0019E566 /* ViewController2.swift */,
 				A049475A25C05D700019E566 /* ViewController3.swift */,
@@ -429,10 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0ABFEAD25CC6ED8005BE408 /* ViewController6.swift in Sources */,
 				A049474D25BA489C0019E566 /* ViewController2.swift in Sources */,
 				A049471125BA41CA0019E566 /* ViewController.swift in Sources */,
 				A049475B25C05D700019E566 /* ViewController3.swift in Sources */,
 				A049470D25BA41CA0019E566 /* AppDelegate.swift in Sources */,
+				A0ABFEA825CC6EB3005BE408 /* ViewController5.swift in Sources */,
+				A0ABFEA325CC6E46005BE408 /* ViewController4.swift in Sources */,
 				A048CFEB25BBF73800DC73B9 /* CustomCell.swift in Sources */,
 				A049470F25BA41CA0019E566 /* SceneDelegate.swift in Sources */,
 				A049471725BA41CA0019E566 /* IncidentTableView.xcdatamodeld in Sources */,
