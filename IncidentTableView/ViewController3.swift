@@ -23,13 +23,32 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableview.dataSource = self
     }
     
+    func alert() {
+            
+            let alert = UIAlertController(title: "Oops!", message: "Looks like you already have this item.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+                //Cancel Action
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
     
     @IBAction func addAction(_ sender: UIBarButtonItem) {
-        //need to make sure there is something in the text field
-        //maybe an alert
-        info.append(textfieldOutlet.text!)
-        tableview.reloadData()
-        textfieldOutlet.text = ""
+        var check : Bool = false
+        for item in info {
+            if(textfieldOutlet.text == item){
+                check = true
+            }
+        }
+        if (check){
+            alert()
+        }
+        else{
+            info.append(textfieldOutlet.text!)
+            tableview.reloadData()
+            textfieldOutlet.text = ""
+        }
+
     }
 
     
