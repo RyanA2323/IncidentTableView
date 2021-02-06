@@ -421,6 +421,13 @@
                                     <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-AD-oPQ">
+                                <rect key="frame" x="143" y="20" width="128" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n4z-3F-gri"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -459,13 +466,6 @@
                                     <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-AD-oPQ">
-                                <rect key="frame" x="-47" y="20" width="128" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CXa-hz-mQf"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
