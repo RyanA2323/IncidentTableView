@@ -1,0 +1,6 @@
+framework module Pods_IncidentTableViewTests {
+  umbrella header "Pods-IncidentTableViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

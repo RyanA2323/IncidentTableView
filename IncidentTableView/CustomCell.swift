@@ -15,7 +15,7 @@ class CustomCell: UITableViewCell {
     
     
     func configure(pic: UIImage, incident: typeIncident) {
-        incidentLabel.text = "\(incident)"
+        incidentLabel.text = "\(incident.rawValue)"
         imageIcon.image = pic
         //time not included yet
     }
