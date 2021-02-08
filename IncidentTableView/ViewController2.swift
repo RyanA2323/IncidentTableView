@@ -27,6 +27,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         
+        incidents = []
+        
         db.collection("incidents").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
