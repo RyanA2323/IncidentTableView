@@ -91,10 +91,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell
         
         switch incidents[indexPath.row].type {
-        case .shooter: cell.configure(pic: UIImage(named: "activeShooter")!, incident: incidents[indexPath.row].type)
-        case .fight: cell.configure(pic: UIImage(named: "fist")!, incident: incidents[indexPath.row].type)
-        case .medical: cell.configure(pic: UIImage(named: "starOfLife")!, incident: incidents[indexPath.row].type)
-        case .other: cell.configure(pic: UIImage(named: "weirdPerson")!, incident: incidents[indexPath.row].type)
+        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incident: incidents[indexPath.row].type)
+        case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incident: incidents[indexPath.row].type)
+        case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incident: incidents[indexPath.row].type)
+        case .other: cell.configure(pic: UIImage(named: "qMark")!, incident: incidents[indexPath.row].type)
         }
         
         return cell
