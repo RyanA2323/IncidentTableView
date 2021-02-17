@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="2485.507246376812" y="79.891304347826093"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller4-->
         <scene sceneID="TOq-we-0JK">
             <objects>
-                <viewController id="l1B-HE-OFo" sceneMemberID="viewController">
+                <viewController id="l1B-HE-OFo" customClass="ViewController4" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pdw-bY-H0C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,22 +399,20 @@
             </objects>
             <point key="canvasLocation" x="3242.0289855072465" y="79.891304347826093"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller5-->
         <scene sceneID="YTo-OC-anZ">
             <objects>
-                <viewController id="hvE-HP-9G4" sceneMemberID="viewController">
+                <viewController id="hvE-HP-9G4" customClass="ViewController5" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3D-qp-SGb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7H-ld-rac">
-                                <rect key="frame" x="31" y="78" width="352" height="540"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lP-JAT">
+                                <rect key="frame" x="31" y="75" width="352" height="541"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="OXA-uF-uiw"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="pHA-fI-04r"/>
-                            </scrollView>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-u1-eib">
-                                <rect key="frame" x="110" y="637" width="194" height="79"/>
+                                <rect key="frame" x="110" y="636" width="194" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="2nd Floor">
@@ -428,10 +426,43 @@
                                 <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c0-of-DKh">
+                                <rect key="frame" x="241" y="120" width="93" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91980725529999996" green="0.75896015989999999" blue="0.87617007920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="mainGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="b4t-C7-2pb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LED-ve-y4g">
+                                <rect key="frame" x="249" y="320" width="95" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75035296630000003" green="0.96130555870000001" blue="0.95465997270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="auxGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="EWg-So-OtM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YU-gs-yS4">
+                                <rect key="frame" x="110" y="214" width="91" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91161483526229858" green="0.47423666715621948" blue="0.43828588724136353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="cafeAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="gfc-64-Yff"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n4z-3F-gri"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="auxGymBtn" destination="LED-ve-y4g" id="lnf-Wr-bQU"/>
+                        <outlet property="cafeBtn" destination="1YU-gs-yS4" id="gcm-0M-Ahi"/>
+                        <outlet property="firstFloorImage" destination="EAe-lP-JAT" id="WON-6J-aR3"/>
+                        <outlet property="mainGymBtn" destination="1c0-of-DKh" id="peW-dz-BES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gt-84-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -495,7 +526,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Floor1" width="718" height="1142"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

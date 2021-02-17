@@ -26,14 +26,20 @@ enum threatLevel {
 
 class Incident{
     var type : typeIncident
-    var location : String?
-    var level : threatLevel?
-    var key : String?
+    var location : String
+    var key : String
     
     init(inc: typeIncident) {
         type = inc
-        // location = "location"
-        //  level = .low
+    }
+    
+    init()
+    {
+      //default constructor
+    }
+    
+    func setLocation(loc: String) {
+        location = loc
     }
     
     func submit(){
@@ -49,7 +55,7 @@ class Incident{
             }
         }
         location = "location"
-        level = .low
+       
     }
     
 }
