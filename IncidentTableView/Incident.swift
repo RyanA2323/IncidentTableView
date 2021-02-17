@@ -26,17 +26,17 @@ enum threatLevel {
 
 class Incident{
     var type : typeIncident
-    var location : String
-    var key : String
+    var location : String?
+    var key : String?
     
     init(inc: typeIncident) {
         type = inc
     }
     
-    init()
-    {
-      //default constructor
-    }
+//    init()
+//    {
+//      //default constructor
+//    }
     
     func setLocation(loc: String) {
         location = loc

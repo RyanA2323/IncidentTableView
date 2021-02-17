@@ -239,6 +239,9 @@
                                 <state key="normal" title="Repot New Information">
                                     <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="l1B-HE-OFo" kind="show" id="A6w-He-0OV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jTs-ux-Pbw"/>
@@ -285,27 +288,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report New Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-wP-7xf">
-                                <rect key="frame" x="55" y="43" width="305" height="36"/>
+                                <rect key="frame" x="55" y="87" width="305" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threat Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-OE-soC">
-                                <rect key="frame" x="150" y="108" width="117" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yB0-Ep-km5">
-                                <rect key="frame" x="65" y="143" width="284" height="32"/>
-                                <color key="backgroundColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <segments>
-                                    <segment title="Low"/>
-                                    <segment title="Medium"/>
-                                    <segment title="High"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Additional Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-nh-5xs">
                                 <rect key="frame" x="110" y="210" width="194" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -364,13 +351,10 @@
                             <constraint firstItem="1Hc-Bl-1Rb" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="65" id="3VZ-TA-oOa"/>
                             <constraint firstItem="7qS-JT-iGK" firstAttribute="leading" secondItem="1Hc-Bl-1Rb" secondAttribute="trailing" constant="52" id="83T-0d-cPG"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="iiV-nh-5xs" secondAttribute="trailing" constant="110" id="CWR-P0-WUd"/>
-                            <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="PjJ-OE-soC" secondAttribute="trailing" constant="147" id="DsW-gV-gPs"/>
                             <constraint firstItem="1Hc-Bl-1Rb" firstAttribute="top" secondItem="lD5-C9-ZOB" secondAttribute="bottom" constant="8" symbolic="YES" id="EqN-Br-BH9"/>
                             <constraint firstItem="lD5-C9-ZOB" firstAttribute="top" secondItem="RyF-wm-qK2" secondAttribute="bottom" constant="31" id="G2d-fZ-uev"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="9cA-af-s6j" secondAttribute="bottom" constant="63" id="Inf-wJ-tHI"/>
                             <constraint firstItem="iiV-nh-5xs" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="110" id="KFe-2w-zGb"/>
-                            <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="yB0-Ep-km5" secondAttribute="trailing" constant="65" id="MRt-iw-i1Y"/>
-                            <constraint firstItem="yB0-Ep-km5" firstAttribute="top" secondItem="PjJ-OE-soC" secondAttribute="bottom" constant="8" symbolic="YES" id="NEY-Nm-gza"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="70" id="Nbx-tv-noI"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="362" id="NrX-ur-8rI"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="1Hc-Bl-1Rb" secondAttribute="bottom" constant="50" id="P3Z-uu-NjU"/>
@@ -379,21 +363,21 @@
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="lD5-C9-ZOB" secondAttribute="bottom" constant="118" id="cPi-yU-3uB"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="7qS-JT-iGK" secondAttribute="bottom" constant="66" id="cgc-Pe-EyJ"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="jNV-Xl-u4B" secondAttribute="trailing" constant="70" id="dsh-O2-gEc"/>
-                            <constraint firstItem="yB0-Ep-km5" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="65" id="e9y-EW-AkY"/>
-                            <constraint firstItem="PjJ-OE-soC" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="150" id="kPk-QU-Lv4"/>
                             <constraint firstItem="bTu-wP-7xf" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="55" id="l7K-71-DVc"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="lD5-C9-ZOB" secondAttribute="trailing" constant="139" id="lT8-aO-DG5"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="1Hc-Bl-1Rb" secondAttribute="trailing" constant="269" id="lc7-Zq-v8i"/>
-                            <constraint firstItem="PjJ-OE-soC" firstAttribute="top" secondItem="bTu-wP-7xf" secondAttribute="bottom" constant="29" id="o0y-mK-TWD"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="bTu-wP-7xf" secondAttribute="trailing" constant="54" id="qZr-Gs-sQ8"/>
                             <constraint firstItem="RyF-wm-qK2" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="8" symbolic="YES" id="tu2-7T-U3Z"/>
                             <constraint firstItem="9cA-af-s6j" firstAttribute="leading" secondItem="1Hc-Bl-1Rb" secondAttribute="trailing" constant="102" id="uNX-yU-4cP"/>
                             <constraint firstItem="lD5-C9-ZOB" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="217" id="uv6-dn-hfa"/>
-                            <constraint firstItem="iiV-nh-5xs" firstAttribute="top" secondItem="yB0-Ep-km5" secondAttribute="bottom" constant="36" id="vDI-fC-6lz"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="9cA-af-s6j" secondAttribute="trailing" constant="70" id="ycy-VQ-iVa"/>
                             <constraint firstItem="9cA-af-s6j" firstAttribute="leading" secondItem="7qS-JT-iGK" secondAttribute="trailing" constant="30" id="zcb-Wp-6tR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KCU-VD-rju"/>
+                    <connections>
+                        <segue destination="hvE-HP-9G4" kind="show" id="o83-0q-Bkx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzv-Nz-lz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,6 +441,7 @@
                         <viewLayoutGuide key="safeArea" id="n4z-3F-gri"/>
                         <color key="backgroundColor" red="0.20035266879999999" green="0.21138140559999999" blue="0.23137566449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4D5-JB-nbm"/>
                     <connections>
                         <outlet property="auxGymBtn" destination="LED-ve-y4g" id="lnf-Wr-bQU"/>
                         <outlet property="cafeBtn" destination="1YU-gs-yS4" id="gcm-0M-Ahi"/>

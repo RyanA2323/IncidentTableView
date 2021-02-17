@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController4: UIViewController {
 
-    var incident = Incident()
     
     
     override func viewDidLoad() {

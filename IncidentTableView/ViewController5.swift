@@ -15,7 +15,7 @@ class ViewController5: UIViewController {
     @IBOutlet weak var firstFloorImage: UIImageView!
     @IBOutlet weak var mainGymBtn: UIButton!
     @IBOutlet weak var auxGymBtn: UIButton!
-    var incident = Incident()
+  //  var incident = Incident()
     
     override func viewDidLoad() {
         super.viewDidLoad()
