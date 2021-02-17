@@ -80,7 +80,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! ViewController3
-        nvc.info.append("Location: \(selectedIncident.location ?? "Unknown")\n Level: \(selectedIncident.level ?? .low)" )
+        nvc.docKey = selectedIncident.key
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
