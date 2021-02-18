@@ -28,6 +28,9 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        tableList = []
+        
         db.collection("incidents").document(docKey).collection("subInformation").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -85,9 +88,9 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     //    }
     
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        ind = indexPath
-    }
+    //    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+    //        ind = indexPath
+    //    }
     
     //    @IBAction func editAction(_ sender: UIBarButtonItem) {
     //        tableview.cellForRow(at: ind)?.textLabel?.text = textfieldOutlet.text!
@@ -105,6 +108,10 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         cell.textLabel?.text = tableList[indexPath.row].info
         cell.textLabel?.numberOfLines = 2
+        
+        cell.detailTextLabel?.text = tableList[indexPath.row].timeCreated as? String
+        cell.detailTextLabel?.textColor = UIColor.gray
+        
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

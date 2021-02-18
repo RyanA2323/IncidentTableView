@@ -27,11 +27,12 @@ enum threatLevel {
 class Incident{
     var type : typeIncident
     var key : String?
+    
     var info : String?
+    var timeCreated : Any?
     
   //  var location : String?
   //  var level : threatLevel?
-  //  var time : Timestamp?
   //  var user : String?
     
     init(inc: typeIncident) {
@@ -39,15 +40,28 @@ class Incident{
     }
     
     func submit(){
+        
+        timeCreated = Timestamp()
+        
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").addDocument(data: [
             "type": type.rawValue,
-            "info": "AAAAA A FIGHT!!!"
+            "time": timeCreated!
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("Document added to Incidents with ID: \(ref!.documentID)")
+            }
+        }
+        
+        db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
+            "info": info ?? "Backup Information"
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added to subInformation with ID: \(ref!.documentID)")
             }
         }
     }

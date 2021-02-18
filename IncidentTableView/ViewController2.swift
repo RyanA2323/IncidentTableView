@@ -44,6 +44,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                         if dt.key == "type" {
                             returnType = dt.value as! String
                         }
+                        if dt.key == "time" {
+                            incidentMade.timeCreated = dt.value as? Timestamp
+                        }
                     }
                     
                     switch returnType {
