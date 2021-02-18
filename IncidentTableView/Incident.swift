@@ -65,17 +65,4 @@ class Incident{
             }
         }
     }
-    
-    func submitSubInfo(doc: String, info: String){
-        var ref: DocumentReference? = nil
-        ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [
-            "info": info
-        ] ) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-    }
 }

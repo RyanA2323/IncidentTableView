@@ -10,7 +10,8 @@ import Firebase
 
 class Core {
     
-    var userID: String?
+    static var userID: String?
+    static var currentIncidentKey: String?
     
     init() {
         

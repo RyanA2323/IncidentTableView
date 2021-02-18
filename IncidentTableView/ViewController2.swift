@@ -14,7 +14,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableview: UITableView!
     var incidents: [Incident] = []
     var selectedIncident: Incident!
-    var btnType: typeIncident = .other
     
     let db = Firestore.firestore()
     
@@ -76,14 +75,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        selectedIncident = incidents[indexPath.row]
-        btnType = selectedIncident.type
+        Core.currentIncidentKey = incidents[indexPath.row].key
         performSegue(withIdentifier: "toVC3", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nvc = segue.destination as! ViewController3
-        nvc.docKey = selectedIncident.key
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

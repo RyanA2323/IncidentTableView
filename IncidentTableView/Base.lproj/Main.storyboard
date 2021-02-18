@@ -306,6 +306,9 @@
                                 <state key="normal" title="REPORT">
                                     <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="FdX-c6-SBA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-C9-ZOB">
                                 <rect key="frame" x="140" y="454" width="135" height="27"/>
@@ -319,6 +322,9 @@
                                 <state key="normal" title="MAP">
                                     <color key="titleColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="mapScreenAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="4kn-xq-KEl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ROOM #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-af-s6j">
                                 <rect key="frame" x="247" y="502" width="97" height="34"/>
@@ -376,6 +382,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="KCU-VD-rju"/>
                     <connections>
+                        <outlet property="infoTextField" destination="RyF-wm-qK2" id="5oL-Qc-gRF"/>
+                        <outlet property="roomNumberField" destination="9cA-af-s6j" id="jR4-0p-TAP"/>
                         <segue destination="hvE-HP-9G4" kind="show" id="o83-0q-Bkx"/>
                     </connections>
                 </viewController>

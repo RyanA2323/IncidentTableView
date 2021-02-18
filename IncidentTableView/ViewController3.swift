@@ -14,7 +14,6 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var textfieldOutlet: UITextField!
     @IBOutlet weak var tableview: UITableView!
     
-    var docKey: String!
     var ind: IndexPath!
     var tableList: [Incident] = []
     
@@ -31,7 +30,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         tableList = []
         
-        db.collection("incidents").document(docKey).collection("subInformation").getDocuments() { (querySnapshot, err) in
+        db.collection("incidents").document(Core.currentIncidentKey ?? "DemoIncident").collection("subInformation").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
