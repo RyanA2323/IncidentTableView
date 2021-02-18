@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     
     //error is in this func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         incidentMade.submit()
         }
     
