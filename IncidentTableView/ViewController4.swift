@@ -16,6 +16,10 @@ class ViewController4: UIViewController {
     }
         
     
-
+ 
+    @IBAction func mapAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toMap1", sender: nil)
+    }
+    
 
 }
