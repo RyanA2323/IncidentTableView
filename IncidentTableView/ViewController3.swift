@@ -108,9 +108,6 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.textLabel?.text = tableList[indexPath.row].info
         cell.textLabel?.numberOfLines = 2
         
-        cell.detailTextLabel?.text = tableList[indexPath.row].timeCreated as? String
-        cell.detailTextLabel?.textColor = UIColor.gray
-        
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

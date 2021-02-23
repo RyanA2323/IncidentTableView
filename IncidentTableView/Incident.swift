@@ -27,9 +27,10 @@ enum threatLevel {
 class Incident{
     var type : typeIncident
     var key : String?
-    
     var info : String?
-    var timeCreated : Any?
+    
+    var timeCreated : Timestamp?
+    var timeDisplay: String?
     
   //  var location : String?
   //  var level : threatLevel?

@@ -45,6 +45,13 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                         }
                         if dt.key == "time" {
                             incidentMade.timeCreated = dt.value as? Timestamp
+                            
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "MM-dd HH:mm:ss"
+
+                            let convertTime = formatter.string(from: incidentMade.timeCreated!.dateValue())
+
+                            incidentMade.timeDisplay = convertTime
                         }
                     }
                     
@@ -70,6 +77,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 }
             }
             // print(self.incidents.count)
+            
+            self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
     }
@@ -90,10 +99,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell
         
         switch incidents[indexPath.row].type {
-        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incident: incidents[indexPath.row].type)
-        case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incident: incidents[indexPath.row].type)
-        case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incident: incidents[indexPath.row].type)
-        case .other: cell.configure(pic: UIImage(named: "qMark")!, incident: incidents[indexPath.row].type)
+        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
+        case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
+        case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
+        case .other: cell.configure(pic: UIImage(named: "qMark")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
         }
         
         return cell

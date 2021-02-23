@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CustomCell: UITableViewCell {
 
@@ -13,9 +14,9 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var incidentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    
-    func configure(pic: UIImage, incident: typeIncident) {
-        incidentLabel.text = "\(incident.rawValue)"
+    func configure(pic: UIImage, incidentType: typeIncident, timeDisplay: String) {
+        incidentLabel.text = "\(incidentType.rawValue)"
         imageIcon.image = pic
+        timeLabel.text = timeDisplay
     }
 }

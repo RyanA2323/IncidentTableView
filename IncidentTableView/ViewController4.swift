@@ -25,6 +25,7 @@ class ViewController4: UIViewController {
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
+        
     }
     
     func submitSubInfo(doc: String, info: String){
