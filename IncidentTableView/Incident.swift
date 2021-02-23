@@ -28,7 +28,8 @@ class Incident{
     var type : typeIncident
     var key : String?
     var info : String?
-    
+    static var location: String?
+
     var timeCreated : Timestamp?
     var timeDisplay: String?
     

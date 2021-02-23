@@ -28,6 +28,10 @@ class ViewController4: UIViewController {
         
     }
     
+    @IBAction func unwind2(_ seg: UIStoryboardSegue ) {
+        print("unwinding to screen 4")
+    }
+    
     func submitSubInfo(doc: String, info: String){
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [

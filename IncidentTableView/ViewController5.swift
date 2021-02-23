@@ -22,16 +22,20 @@ class ViewController5: UIViewController {
     }
     
     @IBAction func mainGymAction(_ sender: UIButton) {
-        location = "Main Gym"
+        Incident.location = "Main Gym"
         
     }
     
     @IBAction func auxGymAction(_ sender: UIButton) {
-        location = "Aux Gym"
+        Incident.location = "Aux Gym"
     }
     
     @IBAction func cafeAction(_ sender: UIButton) {
-        location = "Cafeteria"
+        Incident.location = "Cafeteria"
+    }
+    
+    @IBAction func unwind3(_ seg: UIStoryboardSegue ) {
+        print("unwinding to first floor")
     }
     
 }

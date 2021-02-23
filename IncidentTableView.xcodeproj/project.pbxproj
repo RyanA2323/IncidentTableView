@@ -25,6 +25,7 @@
 		A049474325BA421D0019E566 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474225BA421D0019E566 /* Incident.swift */; };
 		A049474D25BA489C0019E566 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049474C25BA489C0019E566 /* ViewController2.swift */; };
 		A049475B25C05D700019E566 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049475A25C05D700019E566 /* ViewController3.swift */; };
+		A077FFF725E5A82C00768FFD /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077FFF625E5A82C00768FFD /* ViewController6.swift */; };
 		A09310C625DC371E0056D206 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09310C525DC371E0056D206 /* ViewController4.swift */; };
 		A09310CE25DC37400056D206 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09310CD25DC37400056D206 /* ViewController5.swift */; };
 		A0DE661825DDFB53002E7586 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE661725DDFB53002E7586 /* Core.swift */; };
@@ -76,6 +77,7 @@
 		A049474225BA421D0019E566 /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		A049474C25BA489C0019E566 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		A049475A25C05D700019E566 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		A077FFF625E5A82C00768FFD /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		A09310C525DC371E0056D206 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		A09310CD25DC37400056D206 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 		A0DE661725DDFB53002E7586 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				A049475A25C05D700019E566 /* ViewController3.swift */,
 				A09310C525DC371E0056D206 /* ViewController4.swift */,
 				A09310CD25DC37400056D206 /* ViewController5.swift */,
+				A077FFF625E5A82C00768FFD /* ViewController6.swift */,
 				A049471825BA41CE0019E566 /* Assets.xcassets */,
 				A049471A25BA41CE0019E566 /* LaunchScreen.storyboard */,
 				A042DE2125D0D20F00F087BE /* GoogleService-Info.plist */,
@@ -447,6 +450,7 @@
 				A09310C625DC371E0056D206 /* ViewController4.swift in Sources */,
 				A048CFEB25BBF73800DC73B9 /* CustomCell.swift in Sources */,
 				A049470F25BA41CA0019E566 /* SceneDelegate.swift in Sources */,
+				A077FFF725E5A82C00768FFD /* ViewController6.swift in Sources */,
 				A049471725BA41CA0019E566 /* IncidentTableView.xcdatamodeld in Sources */,
 				A049474325BA421D0019E566 /* Incident.swift in Sources */,
 			);

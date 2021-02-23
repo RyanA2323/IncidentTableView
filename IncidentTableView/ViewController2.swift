@@ -76,9 +76,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.incidents.append(incidentMade)
                 }
             }
-            // print(self.incidents.count)
+             print(self.incidents.count)
             
-            self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
+     //     self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
     }

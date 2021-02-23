@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toTableView", sender: nil)
     }
     
+    @IBAction func unwind(_ seg: UIStoryboardSegue ) {
+        print("unwinding")
+    }
+    
     
     //error is in this func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
