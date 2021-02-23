@@ -24,6 +24,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableview.dataSource = self
     }
     
+    
+    @IBAction func unwind4(_ seg: UIStoryboardSegue ) {
+        print("unwinding")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         incidents = []

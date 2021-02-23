@@ -25,7 +25,7 @@ class ViewController4: UIViewController {
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "toFloor1", sender: nil)
     }
     
     @IBAction func unwind2(_ seg: UIStoryboardSegue ) {

@@ -23,15 +23,17 @@ class ViewController5: UIViewController {
     
     @IBAction func mainGymAction(_ sender: UIButton) {
         Incident.location = "Main Gym"
-        
+        print(Incident.location)
     }
     
     @IBAction func auxGymAction(_ sender: UIButton) {
         Incident.location = "Aux Gym"
+        print(Incident.location)
     }
     
     @IBAction func cafeAction(_ sender: UIButton) {
         Incident.location = "Cafeteria"
+        print(Incident.location)
     }
     
     @IBAction func unwind3(_ seg: UIStoryboardSegue ) {

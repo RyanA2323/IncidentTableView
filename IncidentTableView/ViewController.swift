@@ -24,19 +24,19 @@ class ViewController: UIViewController {
     
     @IBAction func fightAction(_ sender: UIButton) {
         incidentMade.type = .fight
-        performSegue(withIdentifier: "toTableView", sender: nil)
+        performSegue(withIdentifier: "toInfo", sender: nil)
     }
     @IBAction func shooterAction(_ sender: UIButton) {
         incidentMade.type = .shooter
-        performSegue(withIdentifier: "toTableView", sender: nil)
+        performSegue(withIdentifier: "toInfo", sender: nil)
     }
     @IBAction func medAction(_ sender: UIButton) {
         incidentMade.type = .medical
-        performSegue(withIdentifier: "toTableView", sender: nil)
+        performSegue(withIdentifier: "toInfo", sender: nil)
     }
     @IBAction func otherAction(_ sender: UIButton) {
         incidentMade.type = .other
-        performSegue(withIdentifier: "toTableView", sender: nil)
+        performSegue(withIdentifier: "toInfo", sender: nil)
     }
     
     @IBAction func unwind(_ seg: UIStoryboardSegue ) {
