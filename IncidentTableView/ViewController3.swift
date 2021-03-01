@@ -10,17 +10,19 @@ import Firebase
 
 class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet weak var textfieldOutlet: UITextField!
+  
+    @IBOutlet weak var titleOutlet: UILabel!
     @IBOutlet weak var tableview: UITableView!
     
     var ind: IndexPath!
     var tableList: [Incident] = []
-    
+    var incType: String = ""
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      titleOutlet.text = "Additional Information \n Incident: \(incType)"
         
         tableview.delegate = self
         tableview.dataSource = self
