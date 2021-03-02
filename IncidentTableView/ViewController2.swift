@@ -114,10 +114,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell
         
         switch incidents[indexPath.row].type {
-        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
-        case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
-        case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
-        case .other: cell.configure(pic: UIImage(named: "qMark")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay!)
+        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null")
+        case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null")
+        case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null")
+        case .other: cell.configure(pic: UIImage(named: "qMark")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null")
         }
         
         return cell
