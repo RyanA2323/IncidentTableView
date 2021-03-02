@@ -17,6 +17,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     var ind: IndexPath!
     var tableList: [Incident] = []
     var incType: String = ""
+    var clickedIncident = Incident(inc: .other)
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -83,48 +84,17 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    //    @IBAction func addAction(_ sender: UIBarButtonItem) {
-    //        var check : Bool = false
-    //        for item in info {
-    //            if(textfieldOutlet.text == item){
-    //                check = true
-    //            }
-    //        }
-    //        if (check){
-    //            alert()
-    //        }
-    //        else{
-    //            info.append(textfieldOutlet.text!)
-    //            tableview.reloadData()
-    //            textfieldOutlet.text = ""
-    //        }
-    //
-    //    }
-    
-    
-    //    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-    //        ind = indexPath
-    //    }
-    
-    //    @IBAction func editAction(_ sender: UIBarButtonItem) {
-    //        tableview.cellForRow(at: ind)?.textLabel?.text = textfieldOutlet.text!
-    //        info[ind.row] = textfieldOutlet.text!
-    //        textfieldOutlet.text = ""
-    //    }
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "myCell")!
+        let cell = tableview.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell2
         
-        cell.textLabel?.text = tableList[indexPath.row].info
-        cell.textLabel?.numberOfLines = 2
-        
-        cell.textLabel?.textColor = UIColor.white
+        //incident.location & incident.info for the parameters 
+        cell.configure(loc: <#T##String#>, addInfo: <#T##String#>)
         return cell
     }
     
