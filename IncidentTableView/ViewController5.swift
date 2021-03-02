@@ -10,6 +10,7 @@ import UIKit
 class ViewController5: UIViewController {
 
     var location: String = ""
+    let currentIncidentKey = Core.currentIncidentKey
     
     @IBOutlet weak var cafeBtn: UIButton!
     @IBOutlet weak var firstFloorImage: UIImageView!
@@ -22,18 +23,18 @@ class ViewController5: UIViewController {
     }
     
     @IBAction func mainGymAction(_ sender: UIButton) {
-        Incident.location = "Main Gym"
-        print(Incident.location)
+        Core.currentInfoLocation = "Main Gym"
+        print(Core.currentInfoLocation ?? "null location")
     }
     
     @IBAction func auxGymAction(_ sender: UIButton) {
-        Incident.location = "Aux Gym"
-        print(Incident.location)
+        Core.currentInfoLocation = "Aux Gym"
+        print(Core.currentInfoLocation ?? "null location")
     }
     
     @IBAction func cafeAction(_ sender: UIButton) {
-        Incident.location = "Cafeteria"
-        print(Incident.location)
+        Core.currentInfoLocation = "Cafeteria"
+        print(Core.currentInfoLocation ?? "null location")
     }
     
     @IBAction func unwind3(_ seg: UIStoryboardSegue ) {

@@ -14,9 +14,16 @@ class ViewController4: UIViewController {
     @IBOutlet weak var roomNumberField: UITextField!
     
     let currentIncidentKey = Core.currentIncidentKey
+    var locationSubmit = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (roomNumberField.text == nil) {
+            locationSubmit = Core.currentInfoLocation ?? "Not Specified"
+        }
     }
     
     
@@ -35,7 +42,8 @@ class ViewController4: UIViewController {
     func submitSubInfo(doc: String, info: String){
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [
-            "info": info
+            "info": info,
+            "location": locationSubmit
         ] ) { err in
             if let err = err {
                 print("Error adding document: \(err)")

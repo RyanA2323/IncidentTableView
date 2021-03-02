@@ -12,7 +12,7 @@ class Core {
     
     static var userID: String?
     static var currentIncidentKey: String?
-    static var currentInfoKey: String?
+    static var currentInfoLocation: String?
     
     init() {
         

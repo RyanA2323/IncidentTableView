@@ -42,11 +42,25 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let incidentMade = Incident(inc: .other)
                     incidentMade.key = document.documentID
                     
-                    var returnInfo: String
+                    var returnInfo = ""
                     for dt in document.data() {
                         if dt.key == "info" {
-                            returnInfo = dt.value as! String
+                            returnInfo = dt.value as? String ?? "No Info To Display."
                             incidentMade.info = returnInfo
+                        }
+                        if dt.key == "location" {
+                            returnInfo = dt.value as? String ?? "Not Specified."
+                            incidentMade.location = returnInfo
+                        }
+                        if dt.key == "time" {
+                            incidentMade.timeCreated = dt.value as? Timestamp
+                            
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "HH:mm"
+
+                            let convertTime = formatter.string(from: incidentMade.timeCreated!.dateValue())
+
+                            incidentMade.timeDisplay = convertTime
                         }
                     }
                     

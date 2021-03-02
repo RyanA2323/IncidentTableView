@@ -28,14 +28,10 @@ class Incident{
     var type : typeIncident
     var key : String?
     var info : String?
-    static var location: String?
+    var location: String?
 
     var timeCreated : Timestamp?
     var timeDisplay: String?
-    
-  //  var location : String?
-  //  var level : threatLevel?
-  //  var user : String?
     
     init(inc: typeIncident) {
         type = inc
