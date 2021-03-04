@@ -29,7 +29,7 @@ class Incident{
     var key : String?
     var info : String?
     var location: String?
-
+    
     var timeCreated : Timestamp?
     var timeDisplay: String?
     
@@ -50,17 +50,19 @@ class Incident{
                 print("Error adding document: \(err)")
             } else {
                 print("Document added to Incidents with ID: \(ref!.documentID)")
+                Core.currentIncidentKey = ref!.documentID
             }
         }
         
-        db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
-            "info": info ?? "Backup Information"
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added to subInformation with ID: \(ref!.documentID)")
-            }
-        }
+//        db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
+//            "info": info ?? "Backup Information"
+//        ]) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added to subInformation with ID: \(ref!.documentID)")
+//            }
+//        }
+        
     }
 }

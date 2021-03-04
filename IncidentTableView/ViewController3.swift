@@ -16,6 +16,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var ind: IndexPath!
     var tableList: [Incident] = []
+    
     var incType: String = ""
     var clickedIncident = Incident(inc: .other)
     let db = Firestore.firestore()
@@ -46,12 +47,11 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                     var returnInfo = ""
                     for dt in document.data() {
                         if dt.key == "info" {
-                            returnInfo = dt.value as? String ?? "No Info To Display."
+                            returnInfo = dt.value as? String ?? "Info receive error."
                             incidentMade.info = returnInfo
                         }
                         if dt.key == "location" {
-                            returnInfo = dt.value as? String ?? "Not Specified."
-                            incidentMade.location = returnInfo
+                           incidentMade.location = dt.value as? String ?? "Location receive error."
                         }
                         if dt.key == "time" {
                             incidentMade.timeCreated = dt.value as? Timestamp
@@ -94,7 +94,11 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableview.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell2
         
         //incident.location & incident.info for the parameters 
-        //cell.configure(loc: <#T##String#>, addInfo: <#T##String#>)
+        cell.configure(loc: tableList[indexPath.row].location ?? "No location specified.", addInfo: tableList[indexPath.row].info ?? "No info to display.")
+        
+       // print(tableList[indexPath.row].location ?? "no")
+       // print(tableList[indexPath.row].info ?? "no info")
+        
         return cell
     }
     

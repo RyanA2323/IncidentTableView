@@ -52,7 +52,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                             incidentMade.timeCreated = dt.value as? Timestamp
                             
                             let formatter = DateFormatter()
-                            formatter.dateFormat = "MM-dd HH:mm:ss"
+                            formatter.dateFormat = "MM/dd HH:mm"
 
                             let convertTime = formatter.string(from: incidentMade.timeCreated!.dateValue())
 
@@ -83,7 +83,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             }
              print(self.incidents.count)
             
-     //     self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
+            self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
     }
@@ -103,6 +103,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incidents.count
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             incidents.remove(at: indexPath.row)
