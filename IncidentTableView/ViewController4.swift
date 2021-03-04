@@ -9,26 +9,29 @@ import UIKit
 import Firebase
 
 class ViewController4: UIViewController {
-
+    
     @IBOutlet weak var infoTextField: UITextView!
     @IBOutlet weak var roomNumberField: UITextField!
     
     let currentIncidentKey = Core.currentIncidentKey
-    var locationSubmit = ""
+    var locationToSubmit: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if (roomNumberField.text == nil) {
-            locationSubmit = Core.currentInfoLocation ?? "Not Specified"
+        if (roomNumberField.text == "") {
+            locationToSubmit = Core.currentInfoLocation ?? "No Location Specified."
+        }
+        else {
+            locationToSubmit = roomNumberField.text
         }
     }
     
     
     @IBAction func reportAction(_ sender: UIButton) {
-        submitSubInfo(doc: currentIncidentKey ?? "DemoIncident", info: infoTextField.text)
+        submitSubInfo(doc: currentIncidentKey ?? "DemoIncident", info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
@@ -39,7 +42,7 @@ class ViewController4: UIViewController {
         print("unwinding to screen 4")
     }
     
-    func submitSubInfo(doc: String, info: String){
+    func submitSubInfo(doc: String, info: String, locationSubmit: String){
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [
             "info": info,
@@ -52,5 +55,5 @@ class ViewController4: UIViewController {
             }
         }
     }
-
+    
 }
