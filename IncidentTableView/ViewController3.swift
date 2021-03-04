@@ -94,7 +94,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableview.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell2
         
         //incident.location & incident.info for the parameters 
-        cell.configure(loc: <#T##String#>, addInfo: <#T##String#>)
+        //cell.configure(loc: <#T##String#>, addInfo: <#T##String#>)
         return cell
     }
     
