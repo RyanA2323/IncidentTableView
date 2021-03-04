@@ -13,7 +13,7 @@ class ViewController4: UIViewController {
     @IBOutlet weak var infoTextField: UITextView!
     @IBOutlet weak var roomNumberField: UITextField!
     
-    let currentIncidentKey = Core.currentIncidentKey
+    var currentIncidentKey:String?
     var locationToSubmit: String?
     
     override func viewDidLoad() {
@@ -21,16 +21,22 @@ class ViewController4: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if (roomNumberField.text == "") {
-            locationToSubmit = Core.currentInfoLocation ?? "No Location Specified."
+        if currentIncidentKey == Core.currentIncidentKey {
+            print("Incident Key Did Not Change!!")
         }
-        else {
-            locationToSubmit = roomNumberField.text
-        }
+        
+        currentIncidentKey = Core.currentIncidentKey
     }
     
-    
     @IBAction func reportAction(_ sender: UIButton) {
+        
+        guard let text = roomNumberField.text, !text.isEmpty else {
+            locationToSubmit = Core.currentInfoLocation
+            return
+        }
+        locationToSubmit = roomNumberField.text ?? "Info Text Field Error."
+        
+        
         submitSubInfo(doc: currentIncidentKey ?? "DemoIncident", info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
     }
     
