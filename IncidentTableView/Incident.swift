@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 let db = Firestore.firestore()
+var defaults = UserDefaults.standard
 
 enum typeIncident: String {
     case fight = "Fight"
@@ -50,7 +51,7 @@ class Incident{
                 print("Error adding document: \(err)")
             } else {
                 print("Document added to Incidents with ID: \(ref!.documentID)")
-                Core.currentIncidentKey = ref!.documentID
+                defaults.setValue(ref!.documentID, forKey: "currentIncidentKey")
             }
         }
         

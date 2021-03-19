@@ -16,6 +16,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var ind: IndexPath!
     var tableList: [Incident] = []
+    var defaults = UserDefaults.standard
+    var currentIncidentKey = "DemoIncident"
     
     var incType: String = ""
     var clickedIncident = Incident(inc: .other)
@@ -34,7 +36,12 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         tableList = []
         
-        db.collection("incidents").document(Core.currentIncidentKey ?? "DemoIncident").collection("subInformation").getDocuments() { (querySnapshot, err) in
+        if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
+            currentIncidentKey = sesh
+            print(currentIncidentKey)
+        }
+        
+        db.collection("incidents").document(currentIncidentKey).collection("subInformation").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

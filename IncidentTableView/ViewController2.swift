@@ -10,11 +10,14 @@ import Firebase
 import FirebaseFirestore
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableview: UITableView!
+    
     var incidents: [Incident] = []
     var selectedIncident: Incident!
     var incident : String!
+    var defaults = UserDefaults.standard
+    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -53,9 +56,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                             
                             let formatter = DateFormatter()
                             formatter.dateFormat = "MM/dd HH:mm"
-
+                            
                             let convertTime = formatter.string(from: incidentMade.timeCreated!.dateValue())
-
+                            
                             incidentMade.timeDisplay = convertTime
                         }
                     }
@@ -81,7 +84,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.incidents.append(incidentMade)
                 }
             }
-             print(self.incidents.count)
+            print(self.incidents.count)
             
             self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
@@ -89,10 +92,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        Core.currentIncidentKey = incidents[indexPath.row].key
+        defaults.setValue(incidents[indexPath.row].key, forKey: "currentIncidentKey")
         incident = "\(incidents[indexPath.row].type)"
         performSegue(withIdentifier: "toVC3", sender: nil)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,8 +125,5 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         return cell
     }
-    
-
-   
 }
 

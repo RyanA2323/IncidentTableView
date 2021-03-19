@@ -19,8 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    
     
     @IBAction func fightAction(_ sender: UIButton) {
         incidentMade.type = .fight

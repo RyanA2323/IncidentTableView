@@ -13,31 +13,45 @@ class ViewController4: UIViewController {
     @IBOutlet weak var infoTextField: UITextView!
     @IBOutlet weak var roomNumberField: UITextField!
     
-    var currentIncidentKey:String?
+    var currentIncidentKey: String = "DemoIncident"
+    var currentIncidentKeyTemp = ""
+    
     var locationToSubmit: String?
+    var defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if currentIncidentKey == Core.currentIncidentKey {
-            print("Incident Key Did Not Change!!")
+
+        if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
+            currentIncidentKeyTemp = sesh
         }
         
-        currentIncidentKey = Core.currentIncidentKey
+        if currentIncidentKey == currentIncidentKeyTemp {
+            print("Incident Key Did Not Change!")
+        }
+        
+        currentIncidentKey = currentIncidentKeyTemp
     }
     
     @IBAction func reportAction(_ sender: UIButton) {
         
         guard let text = roomNumberField.text, !text.isEmpty else {
-            locationToSubmit = Core.currentInfoLocation
+            
+            if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
+                locationToSubmit = sesh
+                print(locationToSubmit ?? "UserDefaults Location Error")
+            }
+            
+            submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+            
             return
         }
-        locationToSubmit = roomNumberField.text ?? "Info Text Field Error."
         
-        
-        submitSubInfo(doc: currentIncidentKey ?? "DemoIncident", info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+        locationToSubmit = "Room \(roomNumberField.text ?? "Room # Error")"
+        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
