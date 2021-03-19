@@ -29,6 +29,7 @@
 		A077FFF725E5A82C00768FFD /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077FFF625E5A82C00768FFD /* ViewController6.swift */; };
 		A09310C625DC371E0056D206 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09310C525DC371E0056D206 /* ViewController4.swift */; };
 		A09310CE25DC37400056D206 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09310CD25DC37400056D206 /* ViewController5.swift */; };
+		A0E980C12605059A00F09F7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E980C02605059A00F09F7D /* LoginViewController.swift */; };
 		FA89D15672AA88972B1531D9 /* Pods_IncidentTableView_IncidentTableViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4A7F6031E9AB8CA73F1A7A /* Pods_IncidentTableView_IncidentTableViewUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		A077FFF625E5A82C00768FFD /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		A09310C525DC371E0056D206 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		A09310CD25DC37400056D206 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		A0E980C02605059A00F09F7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC28729F25CB15D2423BF43A /* Pods_IncidentTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IncidentTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58C6413343F30526DAE6D67 /* Pods-IncidentTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IncidentTableViewTests.release.xcconfig"; path = "Target Support Files/Pods-IncidentTableViewTests/Pods-IncidentTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 				A048CFEA25BBF73800DC73B9 /* CustomCell.swift */,
 				A077001925ED9BAB00768FFD /* CustomCell2.swift */,
 				A049471225BA41CA0019E566 /* Main.storyboard */,
+				A0E980C02605059A00F09F7D /* LoginViewController.swift */,
 				A049471025BA41CA0019E566 /* ViewController.swift */,
 				A049474C25BA489C0019E566 /* ViewController2.swift */,
 				A049475A25C05D700019E566 /* ViewController3.swift */,
@@ -452,6 +455,7 @@
 				A049470F25BA41CA0019E566 /* SceneDelegate.swift in Sources */,
 				A077FFF725E5A82C00768FFD /* ViewController6.swift in Sources */,
 				A049471725BA41CA0019E566 /* IncidentTableView.xcdatamodeld in Sources */,
+				A0E980C12605059A00F09F7D /* LoginViewController.swift in Sources */,
 				A049474325BA421D0019E566 /* Incident.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
