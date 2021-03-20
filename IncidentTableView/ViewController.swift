@@ -22,19 +22,19 @@ class ViewController: UIViewController {
     
     @IBAction func fightAction(_ sender: UIButton) {
         incidentMade.type = .fight
-        performSegue(withIdentifier: "toInfo", sender: nil)
+        performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     @IBAction func shooterAction(_ sender: UIButton) {
         incidentMade.type = .shooter
-        performSegue(withIdentifier: "toInfo", sender: nil)
+        performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     @IBAction func medAction(_ sender: UIButton) {
         incidentMade.type = .medical
-        performSegue(withIdentifier: "toInfo", sender: nil)
+        performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     @IBAction func otherAction(_ sender: UIButton) {
         incidentMade.type = .other
-        performSegue(withIdentifier: "toInfo", sender: nil)
+        performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     
     @IBAction func unwind(_ seg: UIStoryboardSegue ) {
