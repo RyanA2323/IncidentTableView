@@ -215,6 +215,7 @@
 				A049470625BA41CA0019E566 /* Frameworks */,
 				A049470725BA41CA0019E566 /* Resources */,
 				537BA433C3F5230CA3C4E2DE /* [CP] Embed Pods Frameworks */,
+				16B5D978BC1206F1BCDC274F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +254,7 @@
 				A049472A25BA41CF0019E566 /* Frameworks */,
 				A049472B25BA41CF0019E566 /* Resources */,
 				9C50F005A524D9EFF503C23D /* [CP] Embed Pods Frameworks */,
+				7AE7146B74D9ECDB54BF7956 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,6 +339,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16B5D978BC1206F1BCDC274F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		537BA433C3F5230CA3C4E2DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,6 +371,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView/Pods-IncidentTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AE7146B74D9ECDB54BF7956 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView-IncidentTableViewUITests/Pods-IncidentTableView-IncidentTableViewUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView-IncidentTableViewUITests/Pods-IncidentTableView-IncidentTableViewUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IncidentTableView-IncidentTableViewUITests/Pods-IncidentTableView-IncidentTableViewUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C50F005A524D9EFF503C23D /* [CP] Embed Pods Frameworks */ = {

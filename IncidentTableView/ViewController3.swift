@@ -10,7 +10,6 @@ import Firebase
 
 class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-  
     @IBOutlet weak var titleOutlet: UILabel!
     @IBOutlet weak var tableview: UITableView!
     

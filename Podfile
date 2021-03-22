@@ -10,6 +10,8 @@ target 'IncidentTableView' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Google'
 
   target 'IncidentTableViewTests' do
     inherit! :search_paths

@@ -80,8 +80,13 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     }
                     
                     // print(returnList)
+                
+                    let dateCompare = Date(timeIntervalSinceNow: -604800)
+                    let timeCompare = Timestamp(date: dateCompare)
                     
-                    self.incidents.append(incidentMade)
+                    if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
+                        self.incidents.append(incidentMade)
+                    }
                 }
             }
             print(self.incidents.count)
