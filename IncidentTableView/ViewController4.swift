@@ -18,6 +18,9 @@ class ViewController4: UIViewController {
     
     var locationToSubmit: String?
     var defaults = UserDefaults.standard
+    let alert = UIAlertController(title: "Submitted!", message: "Would You Like To Add Additional Information?", preferredStyle: .alert)
+    let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
+    let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,13 @@ class ViewController4: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
 
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        present(alert, animated: true, completion: nil)
+        print("presented")
+        
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKeyTemp = sesh
         }
