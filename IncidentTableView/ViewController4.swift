@@ -10,6 +10,9 @@ import Firebase
 
 class ViewController4: UIViewController {
     
+    @IBOutlet weak var submittedLabel: UILabel!
+    @IBOutlet weak var reportBtnLabel: UIButton!
+    @IBOutlet weak var enterLabel: UILabel!
     @IBOutlet weak var infoTextField: UITextView!
     @IBOutlet weak var roomNumberField: UITextField!
     
@@ -27,9 +30,15 @@ class ViewController4: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
-        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
-        let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
+   hide()
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+            //code
+            self.unhide()
+        })
+        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
+            //code
+            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
+        })
         alert.addAction(yesAction)
         alert.addAction(noAction)
         present(alert, animated: true, completion: nil)
@@ -85,5 +94,20 @@ class ViewController4: UIViewController {
             }
         }
     }
+    
+    func hide() {
+        infoTextField.isHidden = true
+        reportBtnLabel.isHidden = true
+        enterLabel.isHidden = true
+        submittedLabel.isHidden = false
+    }
+    
+    func unhide() {
+        infoTextField.isHidden = false
+        reportBtnLabel.isHidden = false
+        enterLabel.isHidden = false
+        submittedLabel.isHidden = true
+    }
+    
     
 }

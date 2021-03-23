@@ -462,9 +462,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="KCU-VD-rju"/>
                     <connections>
+                        <outlet property="enterLabel" destination="iiV-nh-5xs" id="HkY-s2-aSk"/>
                         <outlet property="infoTextField" destination="RyF-wm-qK2" id="5oL-Qc-gRF"/>
+                        <outlet property="reportBtnLabel" destination="jNV-Xl-u4B" id="baN-Ob-UcZ"/>
                         <outlet property="roomNumberField" destination="9cA-af-s6j" id="jR4-0p-TAP"/>
+                        <outlet property="submittedLabel" destination="7MP-rG-axR" id="pTr-jA-YvD"/>
                         <segue destination="hvE-HP-9G4" kind="show" identifier="toFloor1" id="o83-0q-Bkx"/>
+                        <segue destination="77x-nQ-Uet" kind="show" identifier="toIncidentList" id="2Hi-lu-GmA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzv-Nz-lz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -790,9 +794,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="95u-jy-cCn"/>
+        <segue reference="o83-0q-Bkx"/>
         <segue reference="3Bh-Wu-tbM"/>
-        <segue reference="NcS-rt-K5w"/>
+        <segue reference="2Hi-lu-GmA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
