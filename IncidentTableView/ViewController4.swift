@@ -14,6 +14,7 @@ class ViewController4: UIViewController {
     @IBOutlet weak var reportBtnLabel: UIButton!
     @IBOutlet weak var enterLabel: UILabel!
     @IBOutlet weak var infoTextField: UITextView!
+    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var roomNumberField: UITextField!
     
     var currentIncidentKey: String = "DemoIncident"
@@ -22,27 +23,25 @@ class ViewController4: UIViewController {
     var locationToSubmit: String?
     var defaults = UserDefaults.standard
     let alert = UIAlertController(title: "Submitted!", message: "Would You Like To Add Additional Information?", preferredStyle: .alert)
-    let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
-    let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-   hide()
-        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-            //code
-            self.unhide()
-        })
-        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
-            //code
-            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
-        })
-        alert.addAction(yesAction)
-        alert.addAction(noAction)
-        present(alert, animated: true, completion: nil)
-        print("presented")
+        
+//        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+//            //code
+//            self.unhide()
+//        })
+//        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
+//            //code
+//            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
+//        })
+//        alert.addAction(yesAction)
+//        alert.addAction(noAction)
+//        present(alert, animated: true, completion: nil)
+//        print("presented")
         
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKeyTemp = sesh
@@ -99,6 +98,7 @@ class ViewController4: UIViewController {
         infoTextField.isHidden = true
         reportBtnLabel.isHidden = true
         enterLabel.isHidden = true
+        topLabel.isHidden = true
         submittedLabel.isHidden = false
     }
     
@@ -106,6 +106,7 @@ class ViewController4: UIViewController {
         infoTextField.isHidden = false
         reportBtnLabel.isHidden = false
         enterLabel.isHidden = false
+        topLabel.isHidden = false
         submittedLabel.isHidden = true
     }
     

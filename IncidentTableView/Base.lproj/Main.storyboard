@@ -358,19 +358,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Report New Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-wP-7xf">
-                                <rect key="frame" x="20" y="43" width="374" height="36"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="29"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Additional Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-nh-5xs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Additional Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-nh-5xs">
                                 <rect key="frame" x="110" y="217" width="194" height="20"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNV-Xl-u4B">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNV-Xl-u4B">
                                 <rect key="frame" x="70" y="599" width="274" height="76"/>
                                 <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="35"/>
@@ -382,13 +376,13 @@
                                     <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwind4:" id="vIL-3g-g1r"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-C9-ZOB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-C9-ZOB">
                                 <rect key="frame" x="140" y="454" width="135" height="27"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hc-Bl-1Rb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hc-Bl-1Rb">
                                 <rect key="frame" x="65" y="489" width="80" height="60"/>
                                 <color key="backgroundColor" red="0.43529278040000002" green="0.24621292950000001" blue="0.43531119820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
@@ -399,20 +393,20 @@
                                     <action selector="mapScreenAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="4kn-xq-KEl"/>
                                 </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ROOM #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-af-s6j">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ROOM #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-af-s6j">
                                 <rect key="frame" x="247" y="502" width="97" height="34"/>
                                 <color key="backgroundColor" red="0.82845205070000005" green="0.85768133400000002" blue="0.91765636210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qS-JT-iGK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qS-JT-iGK">
                                 <rect key="frame" x="197" y="506" width="20" height="27"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RyF-wm-qK2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RyF-wm-qK2">
                                 <rect key="frame" x="20" y="245" width="374" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -420,11 +414,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submitted!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MP-rG-axR">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submitted!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MP-rG-axR">
                                 <rect key="frame" x="0.0" y="129" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report New Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-wP-7xf">
+                                <rect key="frame" x="0.0" y="32" width="414" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="29"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -444,15 +445,12 @@
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="70" id="Nbx-tv-noI"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="362" id="NrX-ur-8rI"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="1Hc-Bl-1Rb" secondAttribute="bottom" constant="50" id="P3Z-uu-NjU"/>
-                            <constraint firstItem="bTu-wP-7xf" firstAttribute="top" secondItem="DwG-29-BpR" secondAttribute="top" constant="43" id="XmZ-en-M0V"/>
                             <constraint firstItem="9cA-af-s6j" firstAttribute="top" secondItem="lD5-C9-ZOB" secondAttribute="bottom" constant="21" id="Zis-15-zLY"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="lD5-C9-ZOB" secondAttribute="bottom" constant="118" id="cPi-yU-3uB"/>
                             <constraint firstItem="jNV-Xl-u4B" firstAttribute="top" secondItem="7qS-JT-iGK" secondAttribute="bottom" constant="66" id="cgc-Pe-EyJ"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="jNV-Xl-u4B" secondAttribute="trailing" constant="70" id="dsh-O2-gEc"/>
-                            <constraint firstItem="bTu-wP-7xf" firstAttribute="leading" secondItem="DwG-29-BpR" secondAttribute="leading" constant="55" id="l7K-71-DVc"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="lD5-C9-ZOB" secondAttribute="trailing" constant="139" id="lT8-aO-DG5"/>
                             <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="1Hc-Bl-1Rb" secondAttribute="trailing" constant="269" id="lc7-Zq-v8i"/>
-                            <constraint firstItem="DwG-29-BpR" firstAttribute="trailing" secondItem="bTu-wP-7xf" secondAttribute="trailing" constant="54" id="qZr-Gs-sQ8"/>
                             <constraint firstItem="RyF-wm-qK2" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="8" symbolic="YES" id="tu2-7T-U3Z"/>
                             <constraint firstItem="9cA-af-s6j" firstAttribute="leading" secondItem="1Hc-Bl-1Rb" secondAttribute="trailing" constant="102" id="uNX-yU-4cP"/>
                             <constraint firstItem="lD5-C9-ZOB" firstAttribute="top" secondItem="iiV-nh-5xs" secondAttribute="bottom" constant="217" id="uv6-dn-hfa"/>
@@ -467,6 +465,7 @@
                         <outlet property="reportBtnLabel" destination="jNV-Xl-u4B" id="baN-Ob-UcZ"/>
                         <outlet property="roomNumberField" destination="9cA-af-s6j" id="jR4-0p-TAP"/>
                         <outlet property="submittedLabel" destination="7MP-rG-axR" id="pTr-jA-YvD"/>
+                        <outlet property="topLabel" destination="bTu-wP-7xf" id="Rpr-7i-hg3"/>
                         <segue destination="hvE-HP-9G4" kind="show" identifier="toFloor1" id="o83-0q-Bkx"/>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="toIncidentList" id="2Hi-lu-GmA"/>
                     </connections>
@@ -517,7 +516,6 @@
                                 </state>
                                 <connections>
                                     <action selector="mainGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="b4t-C7-2pb"/>
-                                    <segue destination="l1B-HE-OFo" kind="show" id="eJf-lk-f7J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LED-ve-y4g">
@@ -530,7 +528,6 @@
                                 </state>
                                 <connections>
                                     <action selector="auxGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="EWg-So-OtM"/>
-                                    <segue destination="l1B-HE-OFo" kind="show" id="qUV-Fj-FVB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YU-gs-yS4">
@@ -543,7 +540,6 @@
                                 </state>
                                 <connections>
                                     <action selector="cafeAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="gfc-64-Yff"/>
-                                    <segue destination="l1B-HE-OFo" kind="show" id="3Bh-Wu-tbM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -556,6 +552,7 @@
                         <outlet property="cafeBtn" destination="1YU-gs-yS4" id="gcm-0M-Ahi"/>
                         <outlet property="firstFloorImage" destination="EAe-lP-JAT" id="WON-6J-aR3"/>
                         <outlet property="mainGymBtn" destination="1c0-of-DKh" id="peW-dz-BES"/>
+                        <segue destination="l1B-HE-OFo" kind="show" identifier="toVC4fromVC5" id="3BB-mB-DDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gt-84-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -795,7 +792,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="o83-0q-Bkx"/>
-        <segue reference="3Bh-Wu-tbM"/>
+        <segue reference="3BB-mB-DDe"/>
         <segue reference="2Hi-lu-GmA"/>
     </inferredMetricsTieBreakers>
     <resources>
