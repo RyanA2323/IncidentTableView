@@ -94,7 +94,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XhD-A8-CkR" secondAttribute="bottom" constant="20" id="lAB-27-enf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Report" selectedImage="rectangle.and.pencil.and.ellipsis" catalog="system" id="bB8-Pn-zE5"/>
+                    <tabBarItem key="tabBarItem" title="Report" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="bB8-Pn-zE5"/>
                     <navigationItem key="navigationItem" id="PuG-u5-apW"/>
                     <connections>
                         <outlet property="fightOutlet" destination="f2A-t5-a1P" id="HhP-4n-bw6"/>
@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="1846" y="80"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="toq-gp-Dwf">
             <objects>
                 <viewController id="u3h-Gj-bgh" customClass="LoginViewController" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                         <viewLayoutGuide key="safeArea" id="2Te-nA-80O"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="ic_google.png" id="sQY-fe-vQo"/>
+                    <tabBarItem key="tabBarItem" title="Login" image="google.png" id="sQY-fe-vQo"/>
                     <connections>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="loginToList" id="OQ7-gx-zyA"/>
                     </connections>
@@ -214,7 +214,7 @@
                             <constraint firstItem="ibH-yg-BWj" firstAttribute="top" secondItem="moS-ZM-v7H" secondAttribute="top" constant="18" id="w3g-YT-dC7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Active Incidents" selectedImage="text.redaction" catalog="system" id="qbG-do-xsW"/>
+                    <tabBarItem key="tabBarItem" title="Active Incidents" image="text.justify" catalog="system" id="qbG-do-xsW"/>
                     <navigationItem key="navigationItem" id="hzh-kh-5le"/>
                     <connections>
                         <outlet property="tableview" destination="0bl-g2-ElW" id="eXZ-YQ-Ccb"/>
@@ -787,17 +787,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o83-0q-Bkx"/>
-        <segue reference="eao-D6-2IS"/>
-        <segue reference="2Hi-lu-GmA"/>
+        <segue reference="95u-jy-cCn"/>
+        <segue reference="dla-1J-ZEe"/>
+        <segue reference="OQ7-gx-zyA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
         <image name="floor2" width="219" height="600"/>
-        <image name="ic_google.png" width="24" height="24"/>
+        <image name="google.png" width="18" height="18"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
-        <image name="text.redaction" catalog="system" width="128" height="100"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
