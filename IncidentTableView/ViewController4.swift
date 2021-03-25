@@ -19,7 +19,7 @@ class ViewController4: UIViewController {
     
     var currentIncidentKey: String = "DemoIncident"
     var currentIncidentKeyTemp = ""
-    
+    static var fromAddInfo: Bool = false
     var locationToSubmit: String?
     var defaults = UserDefaults.standard
     let alert = UIAlertController(title: "Submitted!", message: "Would You Like To Add Additional Information?", preferredStyle: .alert)
@@ -76,7 +76,7 @@ class ViewController4: UIViewController {
         performSegue(withIdentifier: "toFloor1", sender: nil)
     }
     
-    @IBAction func unwind2(_ seg: UIStoryboardSegue ) {
+    @IBAction func unwindVC4(_ seg: UIStoryboardSegue ) {
         print("unwinding to screen 4")
     }
     

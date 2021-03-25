@@ -108,4 +108,14 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    @IBAction func next(_ sender: UIButton) {
+        ViewController4.fromAddInfo = true
+        performSegue(withIdentifier: "next", sender: nil)
+    }
+    
+    @IBAction func unwindVC3(_ seg: UIStoryboardSegue ) {
+  
+    }
+    
+    
 }

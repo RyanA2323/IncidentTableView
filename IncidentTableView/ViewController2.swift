@@ -28,7 +28,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     
-    @IBAction func unwind4(_ seg: UIStoryboardSegue ) {
+    @IBAction func unwindVC2(_ seg: UIStoryboardSegue ) {
         print("unwinding")
     }
     

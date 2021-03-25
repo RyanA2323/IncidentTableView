@@ -46,6 +46,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         incidentMade.info = "demo information"
         incidentMade.submit()
+        let nvc = segue.destination as! ViewController5
+        nvc.from4Btns = true
         }
     
     

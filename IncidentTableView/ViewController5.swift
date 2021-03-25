@@ -18,7 +18,8 @@ class ViewController5: UIViewController {
     @IBOutlet weak var auxGymBtn: UIButton!
   //  var incident = Incident()
     var runTimesCheck = 0
-    let alert = UIAlertController(title: "", message: "Are Your Sure You Want To Submit?", preferredStyle: .alert)
+    var from4Btns: Bool = false
+    let alert = UIAlertController(title: "Check", message: "Are Your Sure You Want To Submit?", preferredStyle: .alert)
     let alert2 = UIAlertController(title: "Successfully Submitted!", message: "Would You Like To Add Additional Informaion?", preferredStyle: .alert)
     let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
     let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
@@ -28,6 +29,7 @@ class ViewController5: UIViewController {
     
     @IBAction func mainGymAction(_ sender: UIButton) {
         defaults.setValue("Main Gym", forKey: "currentInfoLocation")
+        if from4Btns == true {
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
             self.runAlert2()
@@ -42,10 +44,15 @@ class ViewController5: UIViewController {
         present(alert, animated: true, completion: nil)
         print("presented")
         runTimesCheck += 1
+        } else {
+            performSegue(withIdentifier: "unwindVC4", sender: nil)
+        }
     }
     
     @IBAction func auxGymAction(_ sender: UIButton) {
         defaults.setValue("Aux Gym", forKey: "currentInfoLocation")
+        if from4Btns == true {
+    
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
             self.runAlert2()
@@ -60,10 +67,15 @@ class ViewController5: UIViewController {
         present(alert, animated: true, completion: nil)
         print("presented")
         runTimesCheck += 1
+        } else {
+            performSegue(withIdentifier: "unwindVC4", sender: nil)
+        }
     }
     
     @IBAction func cafeAction(_ sender: UIButton) {
         defaults.setValue("Cafe", forKey: "currentInfoLocation")
+        if from4Btns == true {
+           
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
             self.runAlert2()
@@ -79,9 +91,12 @@ class ViewController5: UIViewController {
         present(alert, animated: true, completion: nil)
         print("presented")
         runTimesCheck += 1
+        } else {
+            performSegue(withIdentifier: "unwindVC4", sender: nil)
+        }
     }
     
-    @IBAction func unwind3(_ seg: UIStoryboardSegue ) {
+    @IBAction func unwindVC5(_ seg: UIStoryboardSegue ) {
         print("unwinding to first floor")
     }
     
@@ -89,15 +104,18 @@ class ViewController5: UIViewController {
     func runAlert2() {
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
+            ViewController4.fromAddInfo = false
             self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
         })
         let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
             //code
-            
+            self.performSegue(withIdentifier: "homeAfterSubmit", sender: nil)
         })
-        alert2.addAction(yesAction)
         alert2.addAction(noAction)
+        alert2.addAction(yesAction)
         present(alert2, animated: true, completion: nil)
     }
     
 }
+
+

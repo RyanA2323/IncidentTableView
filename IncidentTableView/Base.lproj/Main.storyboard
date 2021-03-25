@@ -94,7 +94,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XhD-A8-CkR" secondAttribute="bottom" constant="20" id="lAB-27-enf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Report" id="bB8-Pn-zE5"/>
+                    <tabBarItem key="tabBarItem" title="Report" selectedImage="rectangle.and.pencil.and.ellipsis" catalog="system" id="bB8-Pn-zE5"/>
                     <navigationItem key="navigationItem" id="PuG-u5-apW"/>
                     <connections>
                         <outlet property="fightOutlet" destination="f2A-t5-a1P" id="HhP-4n-bw6"/>
@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="1846" y="80"/>
         </scene>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="toq-gp-Dwf">
             <objects>
                 <viewController id="u3h-Gj-bgh" customClass="LoginViewController" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                         <viewLayoutGuide key="safeArea" id="2Te-nA-80O"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Login" id="sQY-fe-vQo"/>
+                    <tabBarItem key="tabBarItem" selectedImage="ic_google.png" id="sQY-fe-vQo"/>
                     <connections>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="loginToList" id="OQ7-gx-zyA"/>
                     </connections>
@@ -214,7 +214,7 @@
                             <constraint firstItem="ibH-yg-BWj" firstAttribute="top" secondItem="moS-ZM-v7H" secondAttribute="top" constant="18" id="w3g-YT-dC7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Active Incidents" id="qbG-do-xsW"/>
+                    <tabBarItem key="tabBarItem" title="Active Incidents" selectedImage="text.redaction" catalog="system" id="qbG-do-xsW"/>
                     <navigationItem key="navigationItem" id="hzh-kh-5le"/>
                     <connections>
                         <outlet property="tableview" destination="0bl-g2-ElW" id="eXZ-YQ-Ccb"/>
@@ -291,7 +291,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="l1B-HE-OFo" kind="show" id="A6w-He-0OV"/>
+                                    <action selector="next:" destination="ZA2-LO-Edl" eventType="touchUpInside" id="Btr-2E-fKV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0e-jw-Wd7">
@@ -302,7 +302,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZMe-Vy-iXd" kind="unwind" unwindAction="unwind4:" id="m1g-NO-2ez"/>
+                                    <segue destination="ZMe-Vy-iXd" kind="unwind" unwindAction="unwindVC2:" id="DOM-JL-3A9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,6 +343,7 @@
                     <connections>
                         <outlet property="tableview" destination="MRe-eA-zxr" id="Dne-m7-IQJ"/>
                         <outlet property="titleOutlet" destination="buR-1f-LJ7" id="p73-Qx-ZZo"/>
+                        <segue destination="l1B-HE-OFo" kind="show" identifier="next" id="eao-D6-2IS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIZ-XC-6pP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -373,7 +374,7 @@
                                 </state>
                                 <connections>
                                     <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="FdX-c6-SBA"/>
-                                    <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwind4:" id="vIL-3g-g1r"/>
+                                    <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC3:" id="mQj-43-mXc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-C9-ZOB">
@@ -414,13 +415,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submitted!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MP-rG-axR">
-                                <rect key="frame" x="0.0" y="129" width="414" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGreenColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report New Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-wP-7xf">
                                 <rect key="frame" x="0.0" y="32" width="414" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -464,7 +458,6 @@
                         <outlet property="infoTextField" destination="RyF-wm-qK2" id="5oL-Qc-gRF"/>
                         <outlet property="reportBtnLabel" destination="jNV-Xl-u4B" id="baN-Ob-UcZ"/>
                         <outlet property="roomNumberField" destination="9cA-af-s6j" id="jR4-0p-TAP"/>
-                        <outlet property="submittedLabel" destination="7MP-rG-axR" id="pTr-jA-YvD"/>
                         <outlet property="topLabel" destination="bTu-wP-7xf" id="Rpr-7i-hg3"/>
                         <segue destination="hvE-HP-9G4" kind="show" identifier="toFloor1" id="o83-0q-Bkx"/>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="toIncidentList" id="2Hi-lu-GmA"/>
@@ -553,9 +546,12 @@
                         <outlet property="firstFloorImage" destination="EAe-lP-JAT" id="WON-6J-aR3"/>
                         <outlet property="mainGymBtn" destination="1c0-of-DKh" id="peW-dz-BES"/>
                         <segue destination="l1B-HE-OFo" kind="show" identifier="toVC4fromVC5" id="3BB-mB-DDe"/>
+                        <segue destination="77x-nQ-Uet" kind="show" identifier="homeAfterSubmit" id="REJ-wP-cIt"/>
+                        <segue destination="MPf-nQ-aSd" kind="unwind" identifier="unwindVC4" unwindAction="unwindVC4:" id="9jB-9Y-AGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gt-84-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="MPf-nQ-aSd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4868" y="80"/>
         </scene>
@@ -583,7 +579,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="byj-Zy-hVB" kind="unwind" unwindAction="unwind3:" id="OnE-kZ-WPu"/>
+                                    <segue destination="byj-Zy-hVB" kind="unwind" unwindAction="unwindVC5:" id="XE7-vU-mRT"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="floor2" translatesAutoresizingMaskIntoConstraints="NO" id="NZV-QK-PU2">
@@ -777,12 +773,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TVD-3w-sW2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="u3h-Gj-bgh" kind="relationship" relationship="viewControllers" id="vMh-qs-oKP"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zqy-On-Row"/>
                         <segue destination="77x-nQ-Uet" kind="relationship" relationship="viewControllers" id="cXq-8U-SwE"/>
-                        <segue destination="u3h-Gj-bgh" kind="relationship" relationship="viewControllers" id="vMh-qs-oKP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5b-qo-z1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -792,13 +788,16 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="o83-0q-Bkx"/>
-        <segue reference="3BB-mB-DDe"/>
+        <segue reference="eao-D6-2IS"/>
         <segue reference="2Hi-lu-GmA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
         <image name="floor2" width="219" height="600"/>
+        <image name="ic_google.png" width="24" height="24"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <image name="text.redaction" catalog="system" width="128" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -807,9 +806,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
