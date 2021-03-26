@@ -10,12 +10,12 @@ import Firebase
 
 class ViewController4: UIViewController {
     
-    @IBOutlet weak var submittedLabel: UILabel!
     @IBOutlet weak var reportBtnLabel: UIButton!
     @IBOutlet weak var enterLabel: UILabel!
     @IBOutlet weak var infoTextField: UITextView!
     @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var roomNumberField: UITextField!
+    @IBOutlet weak var report2: UIButton!
+    @IBOutlet weak var report1: UIButton!
     
     var currentIncidentKey: String = "DemoIncident"
     var currentIncidentKeyTemp = ""
@@ -26,6 +26,11 @@ class ViewController4: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (ViewController4.fromAddInfo == true) {
+            report2.isHidden = true
+        } else{
+            report1.isHidden = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,9 +59,24 @@ class ViewController4: UIViewController {
         currentIncidentKey = currentIncidentKeyTemp
     }
     
+    @IBAction func reportFrom4Btns(_ sender: UIButton) {
+        
+        if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
+            locationToSubmit = sesh
+            print(locationToSubmit ?? "UserDefaults Location Error")
+        }
+        
+        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+    
+            //self.performSegue(withIdentifier: "unwind", sender: nil)
+        
+        
+    }
+    
+    
     @IBAction func reportAction(_ sender: UIButton) {
         
-        guard let text = roomNumberField.text, !text.isEmpty else {
+       // guard let text = roomNumberField.text, !text.isEmpty else {
             
             if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
                 locationToSubmit = sesh
@@ -65,11 +85,14 @@ class ViewController4: UIViewController {
             
             submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
             
-            return
-        }
+           // return
+      //  }
         
-        locationToSubmit = "Room \(roomNumberField.text ?? "Room # Error")"
-        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+     //   locationToSubmit = "Room \(roomNumberField.text ?? "Room # Error")"
+//        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+       
+           // self.performSegue(withIdentifier: "unwind", sender: nil)
+        
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
@@ -99,7 +122,7 @@ class ViewController4: UIViewController {
         reportBtnLabel.isHidden = true
         enterLabel.isHidden = true
         topLabel.isHidden = true
-        submittedLabel.isHidden = false
+       
     }
     
     func unhide() {
@@ -107,7 +130,7 @@ class ViewController4: UIViewController {
         reportBtnLabel.isHidden = false
         enterLabel.isHidden = false
         topLabel.isHidden = false
-        submittedLabel.isHidden = true
+        
     }
     
     
