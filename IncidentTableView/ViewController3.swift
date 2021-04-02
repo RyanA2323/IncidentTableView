@@ -15,17 +15,19 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var ind: IndexPath!
     var tableList: [Incident] = []
+    
     var defaults = UserDefaults.standard
     var currentIncidentKey = "DemoIncident"
+    let db = Firestore.firestore()
+    var infoListener: ListenerRegistration!
     
     var incType: String = ""
     var clickedIncident = Incident(inc: .other)
-    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      titleOutlet.text = "Additional Information \n Incident: \(incType)"
+        titleOutlet.text = "Additional Information \n Incident: \(incType)"
         
         tableview.delegate = self
         tableview.dataSource = self
@@ -33,17 +35,18 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         
-        tableList = []
-        
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKey = sesh
             print(currentIncidentKey)
         }
         
-        db.collection("incidents").document(currentIncidentKey).collection("subInformation").getDocuments() { (querySnapshot, err) in
+        infoListener = db.collection("incidents").document(currentIncidentKey).collection("subInformation").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                
+                self.tableList = []
+                
                 for document in querySnapshot!.documents {
                     // print("\(document.documentID) => \(document.data())")
                     
@@ -57,16 +60,16 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                             incidentMade.info = returnInfo
                         }
                         if dt.key == "location" {
-                           incidentMade.location = dt.value as? String ?? "Location receive error."
+                            incidentMade.location = dt.value as? String ?? "Location receive error."
                         }
                         if dt.key == "time" {
                             incidentMade.timeCreated = dt.value as? Timestamp
                             
                             let formatter = DateFormatter()
                             formatter.dateFormat = "HH:mm"
-
+                            
                             let convertTime = formatter.string(from: incidentMade.timeCreated!.dateValue())
-
+                            
                             incidentMade.timeDisplay = convertTime
                         }
                     }
@@ -90,7 +93,11 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.present(alert, animated: true, completion: nil)
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        infoListener.remove()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
@@ -102,8 +109,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         //incident.location & incident.info for the parameters 
         cell.configure(loc: tableList[indexPath.row].location ?? "No location specified.", addInfo: tableList[indexPath.row].info ?? "No info to display.")
         
-       // print(tableList[indexPath.row].location ?? "no")
-       // print(tableList[indexPath.row].info ?? "no info")
+        // print(tableList[indexPath.row].location ?? "no")
+        // print(tableList[indexPath.row].info ?? "no info")
         
         return cell
     }
@@ -114,7 +121,6 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     @IBAction func unwindVC3(_ seg: UIStoryboardSegue ) {
-  
     }
     
     

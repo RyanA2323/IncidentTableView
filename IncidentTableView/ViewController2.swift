@@ -16,9 +16,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     var incidents: [Incident] = []
     var selectedIncident: Incident!
     var incident : String!
-    var defaults = UserDefaults.standard
     
+    var defaults = UserDefaults.standard
     let db = Firestore.firestore()
+    var incidentListener: ListenerRegistration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +35,13 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         
-        incidents = []
-        
-        db.collection("incidents").getDocuments() { (querySnapshot, err) in
+        incidentListener = db.collection("incidents").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                
+                self.incidents = []
+                
                 for document in querySnapshot!.documents {
                     // print("\(document.documentID) => \(document.data())")
                     
@@ -80,7 +82,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     }
                     
                     // print(returnList)
-                
+                    
                     let dateCompare = Date(timeIntervalSinceNow: -604800)
                     let timeCompare = Timestamp(date: dateCompare)
                     
@@ -94,6 +96,12 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        incidentListener.remove()
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
