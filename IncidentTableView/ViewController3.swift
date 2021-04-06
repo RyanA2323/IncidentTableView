@@ -80,6 +80,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                 }
             }
             // print(self.tableList.count)
+            
+            self.tableList.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
     }

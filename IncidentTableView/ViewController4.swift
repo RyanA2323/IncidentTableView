@@ -35,18 +35,18 @@ class ViewController4: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-//            //code
-//            self.unhide()
-//        })
-//        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
-//            //code
-//            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
-//        })
-//        alert.addAction(yesAction)
-//        alert.addAction(noAction)
-//        present(alert, animated: true, completion: nil)
-//        print("presented")
+        //        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+        //            //code
+        //            self.unhide()
+        //        })
+        //        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
+        //            //code
+        //            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
+        //        })
+        //        alert.addAction(yesAction)
+        //        alert.addAction(noAction)
+        //        present(alert, animated: true, completion: nil)
+        //        print("presented")
         
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKeyTemp = sesh
@@ -59,7 +59,9 @@ class ViewController4: UIViewController {
         currentIncidentKey = currentIncidentKeyTemp
     }
     
-    @IBAction func reportFrom4Btns(_ sender: UIButton) {
+    @IBAction func reportAction(_ sender: UIButton) {
+        
+        // guard let text = roomNumberField.text, !text.isEmpty else {
         
         if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
             locationToSubmit = sesh
@@ -67,32 +69,6 @@ class ViewController4: UIViewController {
         }
         
         submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
-    
-            //self.performSegue(withIdentifier: "unwind", sender: nil)
-        
-        
-    }
-    
-    
-    @IBAction func reportAction(_ sender: UIButton) {
-        
-       // guard let text = roomNumberField.text, !text.isEmpty else {
-            
-            if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
-                locationToSubmit = sesh
-                print(locationToSubmit ?? "UserDefaults Location Error")
-            }
-            
-            submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
-            
-           // return
-      //  }
-        
-     //   locationToSubmit = "Room \(roomNumberField.text ?? "Room # Error")"
-//        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
-       
-           // self.performSegue(withIdentifier: "unwind", sender: nil)
-        
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {
@@ -107,7 +83,8 @@ class ViewController4: UIViewController {
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [
             "info": info,
-            "location": locationSubmit
+            "location": locationSubmit,
+            "time": Timestamp()
         ] ) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -122,7 +99,7 @@ class ViewController4: UIViewController {
         reportBtnLabel.isHidden = true
         enterLabel.isHidden = true
         topLabel.isHidden = true
-       
+        
     }
     
     func unhide() {

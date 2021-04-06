@@ -419,7 +419,6 @@
                                 </state>
                                 <connections>
                                     <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="M66-qB-JSw"/>
-                                    <action selector="reportFrom4Btns:" destination="l1B-HE-OFo" eventType="touchUpInside" id="Qd1-OA-76T"/>
                                     <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC2:" id="HEU-i8-RjG"/>
                                 </connections>
                             </button>
@@ -784,7 +783,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="o83-0q-Bkx"/>
-        <segue reference="eao-D6-2IS"/>
+        <segue reference="dla-1J-ZEe"/>
         <segue reference="2Hi-lu-GmA"/>
     </inferredMetricsTieBreakers>
     <resources>
