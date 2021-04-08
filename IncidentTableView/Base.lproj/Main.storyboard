@@ -143,6 +143,36 @@
             </objects>
             <point key="canvasLocation" x="128" y="80"/>
         </scene>
+        <!--Map View Controller One-->
+        <scene sceneID="tuK-hj-cXJ">
+            <objects>
+                <viewController id="CN1-M6-0kG" customClass="MapViewControllerOne" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qeb-xG-pCP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rMl-8u-gpA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMg-yo-04L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="-725"/>
+        </scene>
+        <!--Map View Controller Two-->
+        <scene sceneID="bpV-3a-p8l">
+            <objects>
+                <viewController id="7nq-gC-QTc" customClass="MapViewControllerTwo" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CpX-ZW-zrs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2jH-Qo-7sf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoY-p1-z1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3230" y="-726"/>
+        </scene>
         <!--Active Incidents-->
         <scene sceneID="zFd-JC-DGg">
             <objects>
