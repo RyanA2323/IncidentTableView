@@ -109,7 +109,8 @@ class ViewController5: UIViewController {
         })
         let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
             //code
-            self.performSegue(withIdentifier: "homeAfterSubmit", sender: nil)
+            print("unwind to 3")
+            self.performSegue(withIdentifier: "unwindVC2", sender: nil)
         })
         alert2.addAction(noAction)
         alert2.addAction(yesAction)
