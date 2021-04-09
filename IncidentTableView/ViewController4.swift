@@ -69,6 +69,7 @@ class ViewController4: UIViewController {
         }
         
         submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+        performSegue(withIdentifier: "unwindVC3", sender: nil)
     }
     
     @IBAction func mapScreenAction(_ sender: UIButton) {

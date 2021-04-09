@@ -10,12 +10,26 @@ import UIKit
 class MapViewControllerOne: UIViewController {
     @IBOutlet var image: UIImageView!
     @IBOutlet var gestures: UITapGestureRecognizer!
+    var runTimesCheck = 0
+    var from4Btns: Bool = false
+    let alert = UIAlertController(title: "Check", message: "Are Your Sure You Want To Submit?", preferredStyle: .alert)
+    let alert2 = UIAlertController(title: "Successfully Submitted!", message: "Would You Like To Add Additional Informaion?", preferredStyle: .alert)
+    let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
+    let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad();
         image.addGestureRecognizer(gestures);
     }
+    
+    
+    
+    @IBAction func unwindVC5(_ seg: UIStoryboardSegue ) {
+        print("unwinding to first floor")
+    }
+    
 
+    
     @IBAction func onTouched(_ sender: Any) {
         let recog = sender as! UITapGestureRecognizer;
         print("bich");
@@ -23,6 +37,27 @@ class MapViewControllerOne: UIViewController {
         let location = Location(pos: normalize(pos), floor: Int.random(in: 0...1));
         // Give to incident class or smthn instead of print
         print(location.pos);
+//-------------------------------------
+        if from4Btns == true {
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+            //code
+            self.runAlert2()
+        })
+        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
+            //code
+        })
+        if runTimesCheck == 0 {
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        }
+        present(alert, animated: true, completion: nil)
+        print("presented")
+        runTimesCheck += 1
+        } else {
+            performSegue(withIdentifier: "unwindVC4", sender: nil)
+        }
+        
+        
     }
     
     func normalize(_ location: CGPoint) -> CGPoint {
@@ -44,4 +79,25 @@ class MapViewControllerOne: UIViewController {
         }
         return floint;
     }
-}
+    
+    
+    
+    
+    func runAlert2() {
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+            //code
+            ViewController4.fromAddInfo = false
+            self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
+        })
+        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
+            //code
+           
+            self.performSegue(withIdentifier: "unwindVC2", sender: nil)
+        })
+        alert2.addAction(noAction)
+        alert2.addAction(yesAction)
+        present(alert2, animated: true, completion: nil)
+    }
+    
+    
+    }

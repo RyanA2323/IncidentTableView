@@ -103,7 +103,7 @@
                         <outlet property="shooterOutlet" destination="ceq-6v-F5d" id="taZ-Ie-fDX"/>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="toTableView" id="NcS-rt-K5w"/>
                         <segue destination="l1B-HE-OFo" kind="show" identifier="toInfo" id="dla-1J-ZEe"/>
-                        <segue destination="hvE-HP-9G4" kind="show" identifier="toMapFromBtns" id="95u-jy-cCn"/>
+                        <segue destination="CN1-M6-0kG" kind="show" identifier="toMapFromBtns" id="EYx-nk-Uuk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,11 +148,11 @@
             <objects>
                 <viewController id="CN1-M6-0kG" customClass="MapViewControllerOne" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qeb-xG-pCP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-qr-g1i">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="c9G-t7-YLT" appends="YES" id="cWr-2s-skp"/>
@@ -168,19 +168,25 @@
                             <constraint firstItem="rMl-8u-gpA" firstAttribute="bottom" secondItem="gGN-qr-g1i" secondAttribute="bottom" id="bRf-Ny-IgP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Eg6-5f-DBy"/>
                     <connections>
                         <outlet property="gestures" destination="c9G-t7-YLT" id="kaV-gE-l5Z"/>
                         <outlet property="image" destination="gGN-qr-g1i" id="dfq-Aj-jCl"/>
+                        <segue destination="Xlh-7e-n3b" kind="unwind" identifier="unwindVC2" unwindAction="unwindVC2:" id="je7-FX-8HW"/>
+                        <segue destination="Xlh-7e-n3b" kind="unwind" identifier="unwindVC3" unwindAction="unwindVC3:" id="ekw-vz-31C"/>
+                        <segue destination="Xlh-7e-n3b" kind="unwind" identifier="unwindVC4" unwindAction="unwindVC4:" id="guD-mE-dV6"/>
+                        <segue destination="l1B-HE-OFo" kind="show" identifier="toVC4fromVC5" id="HUN-uZ-Obl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMg-yo-04L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Xlh-7e-n3b" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="c9G-t7-YLT">
                     <connections>
                         <action selector="onTouched:" destination="CN1-M6-0kG" id="l0k-tU-xvs"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2430" y="-725"/>
+            <point key="canvasLocation" x="4867" y="-612"/>
         </scene>
         <!--Map View Controller Two-->
         <scene sceneID="bpV-3a-p8l">
@@ -202,11 +208,11 @@
             <objects>
                 <viewController id="77x-nQ-Uet" customClass="ViewController2" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4D-av-m51">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bl-g2-ElW">
-                                <rect key="frame" x="0.0" y="70" width="414" height="617"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1983621716" green="0.24874830249999999" blue="0.34903240200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -428,7 +434,6 @@
                                 </state>
                                 <connections>
                                     <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="FdX-c6-SBA"/>
-                                    <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC3:" id="9ON-FA-SEh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-C9-ZOB">
@@ -473,7 +478,6 @@
                                 </state>
                                 <connections>
                                     <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="M66-qB-JSw"/>
-                                    <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC2:" id="HEU-i8-RjG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -506,10 +510,9 @@
                         <outlet property="report2" destination="Xxx-Vl-Jlw" id="mqq-sf-WJZ"/>
                         <outlet property="reportBtnLabel" destination="jNV-Xl-u4B" id="baN-Ob-UcZ"/>
                         <outlet property="topLabel" destination="bTu-wP-7xf" id="Rpr-7i-hg3"/>
-                        <segue destination="hvE-HP-9G4" kind="show" identifier="toFloor1" id="o83-0q-Bkx"/>
                         <segue destination="77x-nQ-Uet" kind="show" identifier="toIncidentList" id="2Hi-lu-GmA"/>
-                        <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC3:" id="0kU-2f-3b5"/>
-                        <segue destination="xYc-hY-Kmw" kind="unwind" unwindAction="unwindVC2:" id="a0w-vp-QDd"/>
+                        <segue destination="xYc-hY-Kmw" kind="unwind" identifier="unwindVC3" unwindAction="unwindVC3:" id="0kU-2f-3b5"/>
+                        <segue destination="CN1-M6-0kG" kind="show" identifier="toFloor1" id="Pfu-Rg-ckc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzv-Nz-lz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -522,7 +525,7 @@
             <objects>
                 <viewController id="hvE-HP-9G4" customClass="ViewController5" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3D-qp-SGb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lP-JAT">
@@ -670,9 +673,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o83-0q-Bkx"/>
-        <segue reference="3BB-mB-DDe"/>
-        <segue reference="cXq-8U-SwE"/>
+        <segue reference="dla-1J-ZEe"/>
+        <segue reference="NcS-rt-K5w"/>
+        <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
