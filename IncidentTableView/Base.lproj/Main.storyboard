@@ -186,22 +186,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4867" y="-612"/>
-        </scene>
-        <!--Map View Controller Two-->
-        <scene sceneID="bpV-3a-p8l">
-            <objects>
-                <viewController id="7nq-gC-QTc" customClass="MapViewControllerTwo" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CpX-ZW-zrs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="2jH-Qo-7sf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QoY-p1-z1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3230" y="-726"/>
+            <point key="canvasLocation" x="3393" y="-681"/>
         </scene>
         <!--Active Incidents-->
         <scene sceneID="zFd-JC-DGg">
@@ -606,7 +591,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gt-84-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="MPf-nQ-aSd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4866.666666666667" y="79.891304347826093"/>
+            <point key="canvasLocation" x="5722" y="80"/>
         </scene>
         <!--View Controller6-->
         <scene sceneID="jzw-L8-QJs">
@@ -648,7 +633,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6o-bC-XXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="byj-Zy-hVB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5576.811594202899" y="79.891304347826093"/>
+            <point key="canvasLocation" x="6548" y="80"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N97-PU-5WY">
@@ -673,7 +658,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dla-1J-ZEe"/>
+        <segue reference="3BB-mB-DDe"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>
