@@ -34,6 +34,9 @@ class Incident{
     var timeCreated : Timestamp?
     var timeDisplay: String?
     
+    var pointx: CGFloat?
+    var pointy: CGFloat?
+    
     init(inc: typeIncident) {
         type = inc
     }
@@ -45,7 +48,9 @@ class Incident{
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").addDocument(data: [
             "type": type.rawValue,
-            "time": timeCreated!
+            "time": timeCreated ?? 0,
+            "pointx": pointx ?? 0,
+            "pointy": pointy ?? 0
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
