@@ -150,11 +150,35 @@
                     <view key="view" contentMode="scaleToFill" id="qeb-xG-pCP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-qr-g1i">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c9G-t7-YLT" appends="YES" id="cWr-2s-skp"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rMl-8u-gpA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gGN-qr-g1i" firstAttribute="top" secondItem="rMl-8u-gpA" secondAttribute="top" id="74J-KY-tSn"/>
+                            <constraint firstItem="gGN-qr-g1i" firstAttribute="leading" secondItem="rMl-8u-gpA" secondAttribute="leading" id="IzS-Tn-Wfa"/>
+                            <constraint firstItem="rMl-8u-gpA" firstAttribute="trailing" secondItem="gGN-qr-g1i" secondAttribute="trailing" id="NL8-1j-z16"/>
+                            <constraint firstItem="rMl-8u-gpA" firstAttribute="bottom" secondItem="gGN-qr-g1i" secondAttribute="bottom" id="bRf-Ny-IgP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gestures" destination="c9G-t7-YLT" id="kaV-gE-l5Z"/>
+                        <outlet property="image" destination="gGN-qr-g1i" id="dfq-Aj-jCl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMg-yo-04L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c9G-t7-YLT">
+                    <connections>
+                        <action selector="onTouched:" destination="CN1-M6-0kG" id="l0k-tU-xvs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2430" y="-725"/>
         </scene>

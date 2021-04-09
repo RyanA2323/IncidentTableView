@@ -8,11 +8,11 @@
 import UIKit
 
 class MapViewControllerTwo: UIViewController {
-
+    @IBOutlet weak var image: IncidentLocationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        image.setFloors([UIImage.init(systemName: "pencil")!, UIImage.init(systemName:"square.and.arrow.down.fill")!])
     }
     
 
