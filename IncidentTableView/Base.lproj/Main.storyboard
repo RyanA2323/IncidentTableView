@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-qr-g1i">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-qr-g1i">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -528,7 +528,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lP-JAT">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lP-JAT">
                                 <rect key="frame" x="31" y="75" width="352" height="541"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -673,7 +673,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3BB-mB-DDe"/>
+        <segue reference="HUN-uZ-Obl"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>

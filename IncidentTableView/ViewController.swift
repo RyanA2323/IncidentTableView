@@ -41,7 +41,6 @@ class ViewController: UIViewController {
         print("unwinding")
     }
     
-    
     //error is in this func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         incidentMade.info = "demo information"

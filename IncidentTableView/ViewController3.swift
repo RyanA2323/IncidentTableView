@@ -53,6 +53,9 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let incidentMade = Incident(inc: .other)
                     incidentMade.key = document.documentID
                     
+                    // Temporary Debug Statement: Prints each map coordinate in the console.s
+                    print("Incident (\(document.documentID) - PointX: \(incidentMade.pointx ?? 0), PointY: \(incidentMade.pointy ?? 0)")
+                    
                     var returnInfo = ""
                     for dt in document.data() {
                         if dt.key == "info" {
