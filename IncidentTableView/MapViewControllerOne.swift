@@ -18,6 +18,7 @@ class MapViewControllerOne: UIViewController {
     let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
     
     var currentIncident = Incident(inc: typeIncident.other)
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -45,6 +46,10 @@ class MapViewControllerOne: UIViewController {
         
         if from4Btns == true {
             let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+                self.defaults.setValue(location.pos.x, forKey: "defaultsX")
+                self.defaults.setValue(location.pos.y, forKey: "defaultsY")
+                
                 self.currentIncident.submit()
                 self.runAlert2()
             })
@@ -59,6 +64,9 @@ class MapViewControllerOne: UIViewController {
             print("presented")
             runTimesCheck += 1
         } else {
+            defaults.setValue(location.pos.x, forKey: "defaultsX")
+            defaults.setValue(location.pos.y, forKey: "defaultsY")
+            
             performSegue(withIdentifier: "unwindVC4", sender: nil)
         }
         
