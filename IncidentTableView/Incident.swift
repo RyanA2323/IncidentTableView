@@ -42,33 +42,31 @@ class Incident{
     }
     
     func submit(){
-        
-        timeCreated = Timestamp()
-        
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").addDocument(data: [
             "type": type.rawValue,
-            "time": timeCreated ?? 0,
-            "pointx": pointx ?? 0,
-            "pointy": pointy ?? 0
+            "time": Timestamp(),
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added to Incidents with ID: \(ref!.documentID)")
                 defaults.setValue(ref!.documentID, forKey: "currentIncidentKey")
+                
+                // Creating an Incident from the Button Screen provides a default subInfo document with location data
+                ref = db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
+                    "info": "N/A",
+                    "pointx": self.pointx ?? 0,
+                    "pointy": self.pointy ?? 0,
+                    "time": Timestamp()
+                ] ) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(ref!.documentID)")
+                    }
+                }
             }
         }
-        
-//        db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
-//            "info": info ?? "Backup Information"
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added to subInformation with ID: \(ref!.documentID)")
-//            }
-//        }
-        
     }
 }

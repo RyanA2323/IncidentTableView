@@ -182,7 +182,7 @@
                 <exit id="Xlh-7e-n3b" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="c9G-t7-YLT">
                     <connections>
-                        <action selector="onTouched:" destination="CN1-M6-0kG" id="l0k-tU-xvs"/>
+                        <action selector="onTapped:" destination="CN1-M6-0kG" id="yFC-3p-Wo2"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

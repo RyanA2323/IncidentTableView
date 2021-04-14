@@ -24,6 +24,9 @@ class ViewController4: UIViewController {
     var defaults = UserDefaults.standard
     let alert = UIAlertController(title: "Submitted!", message: "Would You Like To Add Additional Information?", preferredStyle: .alert)
     
+    var pointX: CGFloat?
+    var pointY: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (ViewController4.fromAddInfo == true) {
@@ -34,19 +37,6 @@ class ViewController4: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        //        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-        //            //code
-        //            self.unhide()
-        //        })
-        //        let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
-        //            //code
-        //            self.performSegue(withIdentifier: "toIncidentList", sender: nil)
-        //        })
-        //        alert.addAction(yesAction)
-        //        alert.addAction(noAction)
-        //        present(alert, animated: true, completion: nil)
-        //        print("presented")
         
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKeyTemp = sesh
@@ -60,15 +50,7 @@ class ViewController4: UIViewController {
     }
     
     @IBAction func reportAction(_ sender: UIButton) {
-        
-        // guard let text = roomNumberField.text, !text.isEmpty else {
-        
-        if let sesh = defaults.object(forKey: "currentInfoLocation") as? String {
-            locationToSubmit = sesh
-            print(locationToSubmit ?? "UserDefaults Location Error")
-        }
-        
-        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, locationSubmit: locationToSubmit ?? "No Location Specified.")
+        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
         performSegue(withIdentifier: "unwindVC3", sender: nil)
     }
     
@@ -80,11 +62,12 @@ class ViewController4: UIViewController {
         print("unwinding to screen 4")
     }
     
-    func submitSubInfo(doc: String, info: String, locationSubmit: String){
+    func submitSubInfo(doc: String, info: String, x: CGFloat, y: CGFloat){
         var ref: DocumentReference? = nil
         ref = db.collection("incidents").document(doc).collection("subInformation").addDocument(data: [
             "info": info,
-            "location": locationSubmit,
+            "pointx": x,
+            "pointy": y,
             "time": Timestamp()
         ] ) { err in
             if let err = err {
@@ -100,7 +83,6 @@ class ViewController4: UIViewController {
         reportBtnLabel.isHidden = true
         enterLabel.isHidden = true
         topLabel.isHidden = true
-        
     }
     
     func unhide() {
@@ -108,8 +90,5 @@ class ViewController4: UIViewController {
         reportBtnLabel.isHidden = false
         enterLabel.isHidden = false
         topLabel.isHidden = false
-        
     }
-    
-    
 }

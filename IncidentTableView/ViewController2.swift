@@ -86,14 +86,14 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let dateCompare = Date(timeIntervalSinceNow: -604800)
                     let timeCompare = Timestamp(date: dateCompare)
                     
-                    if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
+                    if (incidentMade.timeCreated?.dateValue() ?? Timestamp().dateValue() > timeCompare.dateValue()) {
                         self.incidents.append(incidentMade)
                     }
                 }
             }
             print(self.incidents.count)
             
-            self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
+            self.incidents.sort(by: {$0.timeCreated?.dateValue() ?? Timestamp().dateValue() > $1.timeCreated?.dateValue() ?? Timestamp().dateValue()} )
             self.tableview.reloadData()
         }
     }

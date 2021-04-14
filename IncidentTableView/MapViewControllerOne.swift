@@ -31,8 +31,9 @@ class MapViewControllerOne: UIViewController {
         print("unwinding to first floor")
     }
     
-    @IBAction func onTouched(_ sender: Any) {
-        let recog = sender as! UITapGestureRecognizer;
+    @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
+        print("hello")
+        let recog = sender
         let pos = recog.location(in: image);
         let location = Location(pos: normalize(pos), floor: Int.random(in: 0...1));
         // Give to incident class or smthn instead of print
@@ -44,12 +45,11 @@ class MapViewControllerOne: UIViewController {
         
         if from4Btns == true {
             let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-                //code
                 self.currentIncident.submit()
                 self.runAlert2()
             })
             let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
-                //code
+                // Unwind back to the button screen
             })
             if runTimesCheck == 0 {
                 alert.addAction(noAction)
@@ -64,7 +64,6 @@ class MapViewControllerOne: UIViewController {
         
         
     }
-    
     func normalize(_ location: CGPoint) -> CGPoint {
         let frameSize = image.frame.size;
         let imageSize = image.image!.size;

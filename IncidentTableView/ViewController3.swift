@@ -54,7 +54,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                     incidentMade.key = document.documentID
                     
                     // Temporary Debug Statement: Prints each map coordinate in the console.s
-                    print("Incident (\(document.documentID) - PointX: \(incidentMade.pointx ?? 0), PointY: \(incidentMade.pointy ?? 0)")
+                    // print("Incident (\(document.documentID) - PointX: \(incidentMade.pointx ?? 0), PointY: \(incidentMade.pointy ?? 0)")
                     
                     var returnInfo = ""
                     for dt in document.data() {
@@ -62,8 +62,11 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
                             returnInfo = dt.value as? String ?? "Info receive error."
                             incidentMade.info = returnInfo
                         }
-                        if dt.key == "location" {
-                            incidentMade.location = dt.value as? String ?? "Location receive error."
+                        if dt.key == "pointx" {
+                            incidentMade.pointx = dt.value as? CGFloat
+                        }
+                        if dt.key == "pointy" {
+                            incidentMade.pointy = dt.value as? CGFloat
                         }
                         if dt.key == "time" {
                             incidentMade.timeCreated = dt.value as? Timestamp
@@ -112,7 +115,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableview.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell2
         
         //incident.location & incident.info for the parameters 
-        cell.configure(loc: tableList[indexPath.row].location ?? "No location specified.", addInfo: tableList[indexPath.row].info ?? "No info to display.")
+        cell.configure(x: tableList[indexPath.row].pointx ?? 0, y: tableList[indexPath.row].pointy ?? 0, addInfo: tableList[indexPath.row].info ?? "No info to display.")
         
         // print(tableList[indexPath.row].location ?? "no")
         // print(tableList[indexPath.row].info ?? "no info")
