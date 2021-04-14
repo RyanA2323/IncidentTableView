@@ -12,8 +12,8 @@ class CustomCell2: UITableViewCell {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var additionalInfo: UILabel!
     
-    func configure(loc: String, addInfo: String) {
-        self.location.text = "Location: \(loc)"
+    func configure(x: CGFloat, y: CGFloat, addInfo: String) {
+        self.location.text = "PointX: \(x), PointY: \(y)"
         self.additionalInfo.text = "Additional Information: \(addInfo)"
     }
     
