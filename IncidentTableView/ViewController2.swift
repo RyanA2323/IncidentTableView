@@ -34,7 +34,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        startListen()
+    }
+    
+    func startListen() {
         incidentListener = db.collection("incidents").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -43,7 +46,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.incidents = []
                 
                 for document in querySnapshot!.documents {
-                    // print("\(document.documentID) => \(document.data())")
                     
                     let incidentMade = Incident(inc: .other)
                     incidentMade.key = document.documentID
@@ -68,32 +70,27 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     switch returnType {
                     case "Fight":
                         incidentMade.type = .fight
-                    // print("changed to fight")
                     case "Medical":
                         incidentMade.type = .medical
                     case "Shooter":
                         incidentMade.type = .shooter
                     case "Other":
                         incidentMade.type = .other
-                    // print("changed to other")
                     default:
                         incidentMade.type = .shooter
-                    // print("default")
                     }
                     
-                    // print(returnList)
-                    
-                    let dateCompare = Date(timeIntervalSinceNow: -604800)
+                    let dateCompare = Date(timeIntervalSinceNow: -200)
                     let timeCompare = Timestamp(date: dateCompare)
                     
-                    if (incidentMade.timeCreated?.dateValue() ?? Timestamp().dateValue() > timeCompare.dateValue()) {
+                    if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
                         self.incidents.append(incidentMade)
                     }
                 }
             }
             print(self.incidents.count)
             
-            self.incidents.sort(by: {$0.timeCreated?.dateValue() ?? Timestamp().dateValue() > $1.timeCreated?.dateValue() ?? Timestamp().dateValue()} )
+            self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
             self.tableview.reloadData()
         }
     }

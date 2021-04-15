@@ -50,6 +50,13 @@ class ViewController4: UIViewController {
     }
     
     @IBAction func reportAction(_ sender: UIButton) {
+        if let sesh = defaults.object(forKey: "defaultsX") as? CGFloat {
+            pointX = sesh
+        }
+        if let sesh = defaults.object(forKey: "defaultsY") as? CGFloat {
+            pointY = sesh
+        }
+        
         submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
         performSegue(withIdentifier: "unwindVC3", sender: nil)
     }
