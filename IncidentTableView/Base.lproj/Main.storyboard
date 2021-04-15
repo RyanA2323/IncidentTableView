@@ -329,10 +329,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhS-dR-y0M">
-                                <rect key="frame" x="140" y="668" width="265" height="37"/>
+                                <rect key="frame" x="130" y="668" width="275" height="37"/>
                                 <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <state key="normal" title="Repot New Information">
+                                <state key="normal" title="Report New Information">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -340,7 +340,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0e-jw-Wd7">
-                                <rect key="frame" x="10" y="668" width="122" height="37"/>
+                                <rect key="frame" x="10" y="668" width="112" height="37"/>
                                 <color key="backgroundColor" red="0.41850540510000001" green="0.50857814570000004" blue="1" alpha="0.64308647259999996" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
                                 <state key="normal" title="Back">
@@ -658,7 +658,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HUN-uZ-Obl"/>
+        <segue reference="eao-D6-2IS"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>

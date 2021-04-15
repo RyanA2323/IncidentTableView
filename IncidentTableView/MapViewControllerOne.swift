@@ -33,11 +33,9 @@ class MapViewControllerOne: UIViewController {
     }
     
     @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
-        print("hello")
         let recog = sender
         let pos = recog.location(in: image);
         let location = Location(pos: normalize(pos), floor: Int.random(in: 0...1));
-        // Give to incident class or smthn instead of print
         
         currentIncident.pointx = location.pos.x
         currentIncident.pointy = location.pos.y

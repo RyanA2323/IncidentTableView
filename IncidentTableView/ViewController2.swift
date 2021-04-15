@@ -101,7 +101,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         incidentListener.remove()
     }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defaults.setValue(incidents[indexPath.row].key, forKey: "currentIncidentKey")
         incident = "\(incidents[indexPath.row].type)"
         performSegue(withIdentifier: "toVC3", sender: nil)
