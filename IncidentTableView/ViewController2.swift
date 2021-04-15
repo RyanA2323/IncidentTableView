@@ -80,7 +80,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                         incidentMade.type = .shooter
                     }
                     
-                    let dateCompare = Date(timeIntervalSinceNow: -200)
+                    let dateCompare = Date(timeIntervalSinceNow: -604800)
                     let timeCompare = Timestamp(date: dateCompare)
                     
                     if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
