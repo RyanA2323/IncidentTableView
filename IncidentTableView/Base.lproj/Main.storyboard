@@ -344,10 +344,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhS-dR-y0M">
-                                <rect key="frame" x="140" y="668" width="265" height="37"/>
+                                <rect key="frame" x="130" y="668" width="275" height="37"/>
                                 <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <state key="normal" title="Repot New Information">
+                                <state key="normal" title="Report New Information">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -355,7 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0e-jw-Wd7">
-                                <rect key="frame" x="10" y="668" width="122" height="37"/>
+                                <rect key="frame" x="10" y="668" width="112" height="37"/>
                                 <color key="backgroundColor" red="0.41850540510000001" green="0.50857814570000004" blue="1" alpha="0.64308647259999996" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
                                 <state key="normal" title="Back">
@@ -520,136 +520,6 @@
             </objects>
             <point key="canvasLocation" x="4149.275362318841" y="79.891304347826093"/>
         </scene>
-        <!--View Controller5-->
-        <scene sceneID="YTo-OC-anZ">
-            <objects>
-                <viewController id="hvE-HP-9G4" customClass="ViewController5" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b3D-qp-SGb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lP-JAT">
-                                <rect key="frame" x="31" y="75" width="352" height="541"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Floor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-AD-oPQ">
-                                <rect key="frame" x="31" y="20" width="352" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c0-of-DKh">
-                                <rect key="frame" x="241" y="120" width="93" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Main Gym">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="mainGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="b4t-C7-2pb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LED-ve-y4g">
-                                <rect key="frame" x="249" y="320" width="95" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Aux Gym">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="auxGymAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="EWg-So-OtM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YU-gs-yS4">
-                                <rect key="frame" x="110" y="214" width="91" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Cafe">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cafeAction:" destination="hvE-HP-9G4" eventType="touchUpInside" id="gfc-64-Yff"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-u1-eib">
-                                <rect key="frame" x="110" y="636" width="191" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41850540510000001" green="0.50857814570000004" blue="1" alpha="0.64308647259999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
-                                <state key="normal" title="2nd Floor">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="zqN-Xc-XCe" kind="show" id="xnu-lm-hvj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="n4z-3F-gri"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4D5-JB-nbm"/>
-                    <connections>
-                        <outlet property="auxGymBtn" destination="LED-ve-y4g" id="lnf-Wr-bQU"/>
-                        <outlet property="cafeBtn" destination="1YU-gs-yS4" id="gcm-0M-Ahi"/>
-                        <outlet property="firstFloorImage" destination="EAe-lP-JAT" id="WON-6J-aR3"/>
-                        <outlet property="mainGymBtn" destination="1c0-of-DKh" id="peW-dz-BES"/>
-                        <segue destination="l1B-HE-OFo" kind="show" identifier="toVC4fromVC5" id="3BB-mB-DDe"/>
-                        <segue destination="MPf-nQ-aSd" kind="unwind" identifier="unwindVC4" unwindAction="unwindVC4:" id="tND-vN-pqA"/>
-                        <segue destination="MPf-nQ-aSd" kind="unwind" identifier="unwindVC3" unwindAction="unwindVC3:" id="2aR-lH-SQl"/>
-                        <segue destination="MPf-nQ-aSd" kind="unwind" identifier="unwindVC2" unwindAction="unwindVC2:" id="dPK-zU-Cx7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Gt-84-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="MPf-nQ-aSd" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="5722" y="80"/>
-        </scene>
-        <!--View Controller6-->
-        <scene sceneID="jzw-L8-QJs">
-            <objects>
-                <viewController id="zqN-Xc-XCe" customClass="ViewController6" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EQd-84-V3z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second Floor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-uV-3RO">
-                                <rect key="frame" x="20" y="24" width="365" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="floor2" translatesAutoresizingMaskIntoConstraints="NO" id="NZV-QK-PU2">
-                                <rect key="frame" x="20" y="68" width="374" height="557"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOh-gS-7Ep">
-                                <rect key="frame" x="110" y="636" width="195" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41850540510000001" green="0.50857814570000004" blue="1" alpha="0.64308647259999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
-                                <state key="normal" title="1st Floor">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="byj-Zy-hVB" kind="unwind" unwindAction="unwindVC5:" id="XE7-vU-mRT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="CXa-hz-mQf"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vpz-a8-ysR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z6o-bC-XXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="byj-Zy-hVB" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="6548" y="80"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N97-PU-5WY">
             <objects>
@@ -673,20 +543,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HUN-uZ-Obl"/>
+        <segue reference="eao-D6-2IS"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
-        <image name="floor2" width="219" height="600"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
