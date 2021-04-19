@@ -57,7 +57,20 @@ class ViewController4: UIViewController {
             pointY = sesh
         }
         
-        submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
+        var firstReportCheck = false
+        if let sesh = defaults.object(forKey: "fromFirstReport") as? Bool {
+            firstReportCheck = sesh
+        }
+        
+        if(firstReportCheck == true) {
+            setSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
+            print("Setting Sub Info")
+        }
+        else {
+            submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
+            print("Submitting Sub Info")
+        }
+        self.defaults.setValue(false, forKey: "fromFirstReport")
         performSegue(withIdentifier: "unwindVC3", sender: nil)
     }
     
@@ -82,6 +95,17 @@ class ViewController4: UIViewController {
             } else {
                 print("Document added with ID: \(ref!.documentID)")
             }
+        }
+    }
+    
+    func setSubInfo(doc: String, info: String, x: CGFloat, y: CGFloat){
+        var id: String = ""
+        if let sesh = defaults.object(forKey: "subInfoID") as? String {
+            id = sesh
+            
+            db.collection("incidents").document(doc).collection("subInformation").document(id).setData([
+                "info" : info
+            ], merge: true)
         }
     }
     

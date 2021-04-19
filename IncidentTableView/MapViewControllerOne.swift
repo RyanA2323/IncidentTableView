@@ -48,6 +48,8 @@ class MapViewControllerOne: UIViewController {
                 self.defaults.setValue(location.pos.x, forKey: "defaultsX")
                 self.defaults.setValue(location.pos.y, forKey: "defaultsY")
                 
+                self.defaults.setValue(true, forKey: "fromFirstReport")
+                
                 self.currentIncident.submit()
                 self.runAlert2()
             })
