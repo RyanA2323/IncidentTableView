@@ -158,6 +158,10 @@
                                     <outletCollection property="gestureRecognizers" destination="c9G-t7-YLT" appends="YES" id="cWr-2s-skp"/>
                                 </connections>
                             </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redDot" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-t4-nGu">
+                                <rect key="frame" x="155" y="221" width="18" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMl-8u-gpA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -170,6 +174,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Eg6-5f-DBy"/>
                     <connections>
+                        <outlet property="dot" destination="wc1-t4-nGu" id="C1M-D7-39t"/>
                         <outlet property="gestures" destination="c9G-t7-YLT" id="kaV-gE-l5Z"/>
                         <outlet property="image" destination="gGN-qr-g1i" id="dfq-Aj-jCl"/>
                         <segue destination="Xlh-7e-n3b" kind="unwind" identifier="unwindVC2" unwindAction="unwindVC2:" id="je7-FX-8HW"/>
@@ -186,7 +191,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3393" y="-681"/>
+            <point key="canvasLocation" x="3392.753623188406" y="-681.52173913043487"/>
         </scene>
         <!--Map View Controller Two-->
         <scene sceneID="bpV-3a-p8l">
@@ -543,7 +548,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eao-D6-2IS"/>
+        <segue reference="HUN-uZ-Obl"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
     </inferredMetricsTieBreakers>
@@ -552,6 +557,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <image name="redDot" width="512" height="512"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

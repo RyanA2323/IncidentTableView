@@ -10,6 +10,7 @@ import UIKit
 class MapViewControllerOne: UIViewController {
     @IBOutlet var image: UIImageView!
     @IBOutlet var gestures: UITapGestureRecognizer!
+    @IBOutlet weak var dot: UIImageView!
     var runTimesCheck = 0
     var from4Btns: Bool = false
     let alert = UIAlertController(title: "Check", message: "Are Your Sure You Want To Submit?", preferredStyle: .alert)
@@ -23,6 +24,7 @@ class MapViewControllerOne: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         image.addGestureRecognizer(gestures);
+        dot.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +41,11 @@ class MapViewControllerOne: UIViewController {
         
         currentIncident.pointx = location.pos.x
         currentIncident.pointy = location.pos.y
+        
+        
+        print(sender.location(in: self.view))
+        dot.frame.origin = sender.location(in: self.view)
+       dot.isHidden = false
         
         //-------------------------------------
         
