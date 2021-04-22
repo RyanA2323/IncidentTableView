@@ -50,7 +50,7 @@ class Incident{
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added to Incidents with ID: \(ref!.documentID)")
+                print("Incident object added with ID: \(ref!.documentID)")
                 defaults.setValue(ref!.documentID, forKey: "currentIncidentKey")
                 
                 // Creating an Incident from the Button Screen provides a default subInfo document with location data
@@ -63,7 +63,8 @@ class Incident{
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
-                        print("Document added with ID: \(ref!.documentID)")
+                        print("SubInfo object added with ID: \(ref!.documentID)")
+                        defaults.setValue(ref!.documentID, forKey: "subInfoID")
                     }
                 }
             }
