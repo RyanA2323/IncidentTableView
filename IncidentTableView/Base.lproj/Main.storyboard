@@ -143,6 +143,22 @@
             </objects>
             <point key="canvasLocation" x="128" y="80"/>
         </scene>
+        <!--HeatMap-->
+        <scene sceneID="rTE-Br-ftT">
+            <objects>
+                <viewController title="HeatMap" id="9QI-JD-6ks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cay-Uw-hdi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vBP-LG-nus"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Px3-Bz-MO5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCt-A4-WkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198" y="-671"/>
+        </scene>
         <!--Map View Controller One-->
         <scene sceneID="tuK-hj-cXJ">
             <objects>
@@ -242,16 +258,30 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYs-Yi-VyL">
-                                                    <rect key="frame" x="275" y="25" width="119" height="20"/>
+                                                    <rect key="frame" x="217" y="0.0" width="98" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccP-la-Ug6">
+                                                    <rect key="frame" x="323" y="6" width="81" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                                    <state key="normal" title="Heat Map">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="heatMapAction:" destination="E6z-p9-7pg" eventType="touchUpInside" id="b1m-GE-qMM"/>
+                                                        <segue destination="9QI-JD-6ks" kind="show" identifier="fromBtnToHeatMap" id="ed9-N9-3Wt"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="heatMapBtn" destination="ccP-la-Ug6" id="5oN-BS-zTI"/>
                                             <outlet property="imageIcon" destination="gN3-OE-ipg" id="zYU-2U-AuV"/>
                                             <outlet property="incidentLabel" destination="jBH-gy-oXl" id="glL-pI-JP5"/>
                                             <outlet property="timeLabel" destination="cYs-Yi-VyL" id="M1y-8O-lwz"/>
@@ -284,6 +314,7 @@
                     <connections>
                         <outlet property="tableview" destination="0bl-g2-ElW" id="eXZ-YQ-Ccb"/>
                         <segue destination="ZA2-LO-Edl" kind="showDetail" identifier="toVC3" id="Jsz-v8-uQt"/>
+                        <segue destination="9QI-JD-6ks" kind="show" identifier="toHeatMap" id="caL-Dj-Yfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VF6-5H-Lk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -551,6 +582,7 @@
         <segue reference="HUN-uZ-Obl"/>
         <segue reference="NcS-rt-K5w"/>
         <segue reference="EYx-nk-Uuk"/>
+        <segue reference="ed9-N9-3Wt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Floor1" width="718" height="1142"/>
@@ -564,6 +596,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
