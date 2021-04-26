@@ -108,8 +108,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ 
+        if (segue.identifier == "toVC3") {
         let nvc = segue.destination as! ViewController3
         nvc.incType = incident
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
