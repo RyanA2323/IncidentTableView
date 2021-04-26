@@ -13,7 +13,8 @@ class IncidentLocationView: UIImageView {
     
     var floors: [UIImage] = [];
     let drawingLayer = CAShapeLayer()
-    var pointBounds: CGRect? = nil
+    var pointBounds: CGRect? = nil;
+    let pointSize: CGFloat = 10;
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,9 +52,9 @@ class IncidentLocationView: UIImageView {
             off.size.width = imageSize.width/shrinky;
             off.origin.x += (frameSize.width - off.width) / 2;
         }
-        var circleRect = CGRect(origin: off.origin, size: CGSize(width: 10, height: 10));
+        var circleRect = CGRect(origin: off.origin, size: CGSize(width: pointSize, height: pointSize));
         circleRect = circleRect.offsetBy(dx: off.width * pos.x, dy: off.height * pos.y);
-        circleRect = circleRect.offsetBy(dx: -5, dy: -5);
+        circleRect = circleRect.offsetBy(dx: -pointSize/2, dy: -pointSize/2);
         pointBounds = circleRect;
         
         updateDrawingOverlay()
