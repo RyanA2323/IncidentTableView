@@ -27,7 +27,7 @@ enum threatLevel {
 
 class Incident{
     var type : typeIncident
-    var key : String?
+    var key : String = "DemoIncident"
     var info : String?
     var location: String?
     

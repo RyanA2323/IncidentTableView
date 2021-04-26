@@ -146,7 +146,7 @@
         <!--HeatMap-->
         <scene sceneID="rTE-Br-ftT">
             <objects>
-                <viewController title="HeatMap" id="9QI-JD-6ks" sceneMemberID="viewController">
+                <viewController title="HeatMap" id="9QI-JD-6ks" customClass="HeatMapViewController1" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cay-Uw-hdi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
