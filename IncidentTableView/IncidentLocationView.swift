@@ -60,7 +60,8 @@ class IncidentLocationView: UIImageView {
     }
     
     func setFloor(_ floor: Int) {
-        image = floors[floor];
+        // Subtract 1 to make the input 1-indexed instead of 0-indexed.
+        image = floors[floor - 1];
     }
     
     func updateDrawingOverlay() {
@@ -75,7 +76,7 @@ class IncidentLocationView: UIImageView {
         }
     }
     
-    public func setFloors(_ floors: [UIImage]) {
+    public func setFloorImages(_ floors: [UIImage]) {
         self.floors = floors;
     }
 }
