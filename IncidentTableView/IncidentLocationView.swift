@@ -14,7 +14,7 @@ class IncidentLocationView: UIImageView {
     var floors: [UIImage] = [];
     let drawingLayer = CAShapeLayer()
     var pointBounds: CGRect? = nil;
-    let pointSize: CGFloat = 10;
+    let pointSize: CGFloat = 18;
     
     override init(frame: CGRect) {
         super.init(frame: frame)

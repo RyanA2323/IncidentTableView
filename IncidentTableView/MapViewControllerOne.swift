@@ -69,8 +69,10 @@ class MapViewControllerOne: UIViewController {
         } else {
             defaults.setValue(location.pos.x, forKey: "defaultsX")
             defaults.setValue(location.pos.y, forKey: "defaultsY")
+            let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                self.performSegue(withIdentifier: "unwindVC4", sender: nil)
+            }
             
-            performSegue(withIdentifier: "unwindVC4", sender: nil)
         }
         
         
