@@ -115,7 +115,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableview.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell2
         
         //incident.location & incident.info for the parameters 
-        cell.configure(x: tableList[indexPath.row].pointx ?? 0, y: tableList[indexPath.row].pointy ?? 0, addInfo: tableList[indexPath.row].info ?? "No info to display.")
+        cell.configure(room: defaults.string(forKey: "locationName")!, addInfo: tableList[indexPath.row].info ?? "No info to display.")
         
         // print(tableList[indexPath.row].location ?? "no")
         // print(tableList[indexPath.row].info ?? "no info")

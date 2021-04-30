@@ -40,9 +40,11 @@ class MapViewControllerOne: UIViewController {
         
         currentIncident.pointx = location.pos.x
         currentIncident.pointy = location.pos.y
-        
+        print(location.pos.x)
+        print(location.pos.y)
         image.setLocation(location);
         
+        let dotLocation: String = pointToRoom(x: location.pos.x, y: location.pos.y)
         //-------------------------------------
         
         if from4Btns == true {
@@ -50,7 +52,8 @@ class MapViewControllerOne: UIViewController {
                 
                 self.defaults.setValue(location.pos.x, forKey: "defaultsX")
                 self.defaults.setValue(location.pos.y, forKey: "defaultsY")
-                
+                self.defaults.setValue(dotLocation, forKey: "locationName")
+                print("NAME: \(self.defaults.string(forKey: "locationName"))")
                 self.defaults.setValue(true, forKey: "fromFirstReport")
                 
                 self.currentIncident.submit()
@@ -69,6 +72,8 @@ class MapViewControllerOne: UIViewController {
         } else {
             defaults.setValue(location.pos.x, forKey: "defaultsX")
             defaults.setValue(location.pos.y, forKey: "defaultsY")
+            self.defaults.setValue(dotLocation, forKey: "locationName")
+            print("NAME: \(self.defaults.string(forKey: "locationName"))")
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
                 self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
@@ -112,4 +117,33 @@ class MapViewControllerOne: UIViewController {
         alert2.addAction(yesAction)
         present(alert2, animated: true, completion: nil)
     }
+    
+    func pointToRoom(x: CGFloat, y: CGFloat) -> String {
+        var location: String = ""
+        let xDouble = Double(x)
+        let yDouble = Double(y)
+
+        switch xDouble {
+        case 0.6...0.88:
+            if (yDouble >= 0.1 && yDouble <= 0.4) {
+            location = "Main Gym"
+            break
+            }
+        case 0.635...0.88:
+            if (yDouble >= 0.46 && yDouble <= 0.6) {
+            location = "Aux Gym"
+            break
+            }
+        case 0.23...0.46:
+            if (yDouble >= 0.26 && yDouble <= 0.34) {
+            location = "Cafeteria"
+            break
+            }
+        default:
+            print("")
+        }
+        
+        return location
+    }
+    
 }

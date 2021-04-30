@@ -12,8 +12,12 @@ class CustomCell2: UITableViewCell {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var additionalInfo: UILabel!
     
-    func configure(x: CGFloat, y: CGFloat, addInfo: String) {
-        self.location.text = "PointX: \(x), PointY: \(y)"
+    func configure(room: String, addInfo: String) {
+        if room == "" {
+            self.location.text = "Location: N/A"
+        } else {
+        self.location.text = "Location: \(room)"
+        }
         self.additionalInfo.text = "Additional Information: \(addInfo)"
     }
     
