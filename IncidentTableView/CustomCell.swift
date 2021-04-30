@@ -16,15 +16,18 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var heatMapBtn: UIButton!
     
     var id: String = "DemoIncident"
+    var incType: String = ""
     
     func configure(pic: UIImage, incidentType: typeIncident, timeDisplay: String, key: String) {
         incidentLabel.text = "\(incidentType.rawValue)"
         imageIcon.image = pic
         timeLabel.text = timeDisplay
         id = key
+        incType =  "\(incidentType)"
     }
     
     @IBAction func heatMapAction(_ sender: UIButton) {
         defaults.setValue(id, forKey: "currentIncidentKey")
+        defaults.setValue("\(incType)", forKey: "typeIncHeatMap")
     }
 }

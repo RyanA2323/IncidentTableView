@@ -9,6 +9,7 @@ import UIKit
 
 class HeatMapViewController1: UIViewController {
     
+    @IBOutlet weak var incidentLabel: UILabel!
     var currentIncidentKey: String = "DemoIncident"
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class HeatMapViewController1: UIViewController {
         if let sesh = defaults.object(forKey: "currentIncidentKey") as? String {
             currentIncidentKey = sesh
             print(currentIncidentKey)
+            incidentLabel.text = "For Incident: \(defaults.value(forKey: "typeIncHeatMap")!)"
         }
     }
     

@@ -76,7 +76,7 @@ class MapViewControllerOne: UIViewController {
             print("NAME: \(self.defaults.string(forKey: "locationName"))")
            
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
-                self.performSegue(withIdentifier: "unwindVC4", sender: nil)
+               // self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
             
         }
@@ -107,12 +107,12 @@ class MapViewControllerOne: UIViewController {
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
             ViewController4.fromAddInfo = false
-            self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
+            //self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
         })
         let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
             //code
             
-            self.performSegue(withIdentifier: "unwindVC2", sender: nil)
+            //self.performSegue(withIdentifier: "unwindVC2", sender: nil)
         })
         alert2.addAction(noAction)
         alert2.addAction(yesAction)
@@ -142,6 +142,9 @@ class MapViewControllerOne: UIViewController {
         if (xDouble >= 0.495 && xDouble <= 0.56 && yDouble >= 0.46 && yDouble <= 0.555) {
             location = "Wresting Room"
             }
+        if (xDouble >= 0.611 && xDouble <= 0.859 && yDouble >= 0.064 && yDouble <= 0.085) {
+            location = "Foyer"
+        }
         return location
     }
     
