@@ -74,6 +74,7 @@ class MapViewControllerOne: UIViewController {
             defaults.setValue(location.pos.y, forKey: "defaultsY")
             self.defaults.setValue(dotLocation, forKey: "locationName")
             print("NAME: \(self.defaults.string(forKey: "locationName"))")
+           
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
                 self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
@@ -123,26 +124,24 @@ class MapViewControllerOne: UIViewController {
         let xDouble = Double(x)
         let yDouble = Double(y)
 
-        switch xDouble {
-        case 0.6...0.88:
-            if (yDouble >= 0.1 && yDouble <= 0.4) {
+        if (xDouble >= 0.6 && xDouble <= 0.88 && yDouble >= 0.1 && yDouble <= 0.4) {
             location = "Main Gym"
-            break
-            }
-        case 0.635...0.88:
-            if (yDouble >= 0.46 && yDouble <= 0.6) {
+            } else
+        if (xDouble >= 0.635 && xDouble <= 0.88 && yDouble >= 0.46 && yDouble <= 0.6) {
             location = "Aux Gym"
-            break
-            }
-        case 0.23...0.46:
-            if (yDouble >= 0.26 && yDouble <= 0.34) {
+            } else
+        if (xDouble >= 0.23 && xDouble <= 0.46 && yDouble >= 0.26 && yDouble <= 0.34) {
             location = "Cafeteria"
-            break
+            } else
+        if (xDouble >= 0.185 && xDouble <= 0.395 && yDouble >= 0.46 && yDouble <= 0.55) {
+            location = "Auditorium"
+            } else
+        if (xDouble >= 0.42 && xDouble <= 0.46 && yDouble >= 0.46 && yDouble <= 0.556) {
+                location = "Back Stage in Auditorium"
+            } else
+        if (xDouble >= 0.495 && xDouble <= 0.56 && yDouble >= 0.46 && yDouble <= 0.555) {
+            location = "Wresting Room"
             }
-        default:
-            print("")
-        }
-        
         return location
     }
     

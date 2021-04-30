@@ -65,6 +65,7 @@ class ViewController4: UIViewController {
         if(firstReportCheck == true) {
             setSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)
             print("Setting Sub Info")
+            performSegue(withIdentifier: "unwindVC2", sender: nil)
         }
         else {
             submitSubInfo(doc: currentIncidentKey, info: infoTextField.text, x: pointX ?? 0.0, y: pointY ?? 0.0)

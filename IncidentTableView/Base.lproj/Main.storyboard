@@ -509,6 +509,7 @@
                                 </state>
                                 <connections>
                                     <action selector="reportAction:" destination="l1B-HE-OFo" eventType="touchUpInside" id="M66-qB-JSw"/>
+                                    <segue destination="xYc-hY-Kmw" kind="unwind" identifier="unwindVC2" unwindAction="unwindVC2:" id="ls0-7g-uR1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -580,8 +581,8 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="HUN-uZ-Obl"/>
-        <segue reference="NcS-rt-K5w"/>
-        <segue reference="EYx-nk-Uuk"/>
+        <segue reference="2Hi-lu-GmA"/>
+        <segue reference="Pfu-Rg-ckc"/>
         <segue reference="ed9-N9-3Wt"/>
     </inferredMetricsTieBreakers>
     <resources>
