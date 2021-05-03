@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     @IBAction func shooterAction(_ sender: UIButton) {
-        incidentMade.type = .shooter
+        incidentMade.type = .codered
         performSegue(withIdentifier: "toMapFromBtns", sender: nil)
     }
     @IBAction func medAction(_ sender: UIButton) {

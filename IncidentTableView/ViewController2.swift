@@ -73,11 +73,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     case "Medical":
                         incidentMade.type = .medical
                     case "Shooter":
-                        incidentMade.type = .shooter
+                        incidentMade.type = .codered
                     case "Other":
                         incidentMade.type = .other
                     default:
-                        incidentMade.type = .shooter
+                        incidentMade.type = .codered
                     }
                     
                     let dateCompare = Date(timeIntervalSinceNow: -604800)
@@ -130,7 +130,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CustomCell
         
         switch incidents[indexPath.row].type {
-        case .shooter: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null", key: incidents[indexPath.row].key)
+        case .codered: cell.configure(pic: UIImage(named: "weirdPersonRed")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null", key: incidents[indexPath.row].key)
         case .fight: cell.configure(pic: UIImage(named: "squareFistOrange")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null", key: incidents[indexPath.row].key)
         case .medical: cell.configure(pic: UIImage(named: "medicalPink")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null", key: incidents[indexPath.row].key)
         case .other: cell.configure(pic: UIImage(named: "qMark")!, incidentType: incidents[indexPath.row].type, timeDisplay: incidents[indexPath.row].timeDisplay ?? "null", key: incidents[indexPath.row].key)

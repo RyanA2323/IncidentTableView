@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="280.33333333333331"/>
                                                 <color key="backgroundColor" red="0.73393648860000005" green="0.1505818367" blue="0.12150562550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="30"/>
-                                                <state key="normal" title="Shooter">
+                                                <state key="normal" title="Code Red">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -197,6 +197,13 @@
                                     <outletCollection property="gestureRecognizers" destination="c9G-t7-YLT" appends="YES" id="cWr-2s-skp"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Faculty Lot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U62-wS-gnG">
+                                <rect key="frame" x="243" y="561" width="151" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMl-8u-gpA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -421,7 +428,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jTs-ux-Pbw"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="buR-1f-LJ7" firstAttribute="leading" secondItem="jTs-ux-Pbw" secondAttribute="leading" id="3ub-N0-WlS"/>
                             <constraint firstItem="AhS-dR-y0M" firstAttribute="leading" secondItem="n0e-jw-Wd7" secondAttribute="trailing" constant="8" id="6ae-xV-FXi"/>
@@ -603,9 +610,9 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="HUN-uZ-Obl"/>
-        <segue reference="2Hi-lu-GmA"/>
-        <segue reference="Pfu-Rg-ckc"/>
+        <segue reference="eao-D6-2IS"/>
+        <segue reference="NcS-rt-K5w"/>
+        <segue reference="EYx-nk-Uuk"/>
         <segue reference="ed9-N9-3Wt"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -616,6 +623,9 @@
         <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

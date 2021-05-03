@@ -15,7 +15,7 @@ var defaults = UserDefaults.standard
 enum typeIncident: String {
     case fight = "Fight"
     case medical = "Medical"
-    case shooter = "Shooter"
+    case codered = "Code Red"
     case other = "Other"
 }
 
