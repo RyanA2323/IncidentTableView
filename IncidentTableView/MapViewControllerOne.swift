@@ -12,11 +12,10 @@ class MapViewControllerOne: UIViewController {
     @IBOutlet var gestures: UITapGestureRecognizer!
     var runTimesCheck = 0
     var from4Btns: Bool = false
-    let alert = UIAlertController(title: "Check", message: "Are Your Sure You Want To Submit?", preferredStyle: .alert)
     let alert2 = UIAlertController(title: "Successfully Submitted!", message: "Would You Like To Add Additional Informaion?", preferredStyle: .alert)
     let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
     let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
-    
+    var location: String = ""
     var currentIncident = Incident(inc: typeIncident.other)
     let defaults = UserDefaults.standard
     
@@ -45,6 +44,7 @@ class MapViewControllerOne: UIViewController {
         image.setLocation(location);
         
         let dotLocation: String = pointToRoom(x: location.pos.x, y: location.pos.y)
+        let alert = UIAlertController(title: "Submit?", message: "Location: \(self.location)", preferredStyle: .alert)
         //-------------------------------------
         
         if from4Btns == true {
@@ -60,12 +60,12 @@ class MapViewControllerOne: UIViewController {
                 self.runAlert2()
             })
             let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
-                // Unwind back to the button screen
+            
             })
-            if runTimesCheck == 0 {
+          //  if runTimesCheck == 0 {
                 alert.addAction(noAction)
                 alert.addAction(yesAction)
-            }
+           // }
             present(alert, animated: true, completion: nil)
             print("presented")
             runTimesCheck += 1
@@ -76,7 +76,7 @@ class MapViewControllerOne: UIViewController {
             print("NAME: \(self.defaults.string(forKey: "locationName"))")
            
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
-               // self.performSegue(withIdentifier: "unwindVC4", sender: nil)
+               self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
             
         }
@@ -107,12 +107,12 @@ class MapViewControllerOne: UIViewController {
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
             //code
             ViewController4.fromAddInfo = false
-            //self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
+            self.performSegue(withIdentifier: "toVC4fromVC5", sender: nil)
         })
         let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
             //code
             
-            //self.performSegue(withIdentifier: "unwindVC2", sender: nil)
+            self.performSegue(withIdentifier: "unwindVC2", sender: nil)
         })
         alert2.addAction(noAction)
         alert2.addAction(yesAction)
@@ -120,7 +120,7 @@ class MapViewControllerOne: UIViewController {
     }
     
     func pointToRoom(x: CGFloat, y: CGFloat) -> String {
-        var location: String = ""
+        location = ""
         let xDouble = Double(x)
         let yDouble = Double(y)
 
@@ -144,6 +144,9 @@ class MapViewControllerOne: UIViewController {
             }
         if (xDouble >= 0.611 && xDouble <= 0.859 && yDouble >= 0.064 && yDouble <= 0.085) {
             location = "Foyer"
+        }
+        if (xDouble >= 0.185 && xDouble <= 0.424 && yDouble >= 0.819 && yDouble <= 0.835) {
+            location = "Chem Hallway"
         }
         return location
     }
