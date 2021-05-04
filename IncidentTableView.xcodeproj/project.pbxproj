@@ -27,6 +27,7 @@
 		A049475B25C05D700019E566 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049475A25C05D700019E566 /* ViewController3.swift */; };
 		A05DE664261FBB2800BCABAA /* IncidentLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DE663261FBB2800BCABAA /* IncidentLocationView.swift */; };
 		A05DE66C261FC4D300BCABAA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DE66B261FC4D300BCABAA /* Location.swift */; };
+		A064D60C2641AC040089B3F2 /* infoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A064D60B2641AC040089B3F2 /* infoScreen.swift */; };
 		A077001A25ED9BAB00768FFD /* CustomCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077001925ED9BAB00768FFD /* CustomCell2.swift */; };
 		A077FFF725E5A82C00768FFD /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077FFF625E5A82C00768FFD /* ViewController6.swift */; };
 		A09310C625DC371E0056D206 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09310C525DC371E0056D206 /* ViewController4.swift */; };
@@ -84,6 +85,7 @@
 		A049475A25C05D700019E566 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		A05DE663261FBB2800BCABAA /* IncidentLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentLocationView.swift; sourceTree = "<group>"; };
 		A05DE66B261FC4D300BCABAA /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A064D60B2641AC040089B3F2 /* infoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoScreen.swift; sourceTree = "<group>"; };
 		A077001925ED9BAB00768FFD /* CustomCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell2.swift; sourceTree = "<group>"; };
 		A077FFF625E5A82C00768FFD /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		A09310C525DC371E0056D206 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				A05DE66B261FC4D300BCABAA /* Location.swift */,
 				A048CFEA25BBF73800DC73B9 /* CustomCell.swift */,
 				A077001925ED9BAB00768FFD /* CustomCell2.swift */,
+				A064D60B2641AC040089B3F2 /* infoScreen.swift */,
 				A049471225BA41CA0019E566 /* Main.storyboard */,
 				A0E980C02605059A00F09F7D /* LoginViewController.swift */,
 				A0B67996261F642600024640 /* MapViewControllerOne.swift */,
@@ -499,6 +502,7 @@
 				A077001A25ED9BAB00768FFD /* CustomCell2.swift in Sources */,
 				A0B67997261F642600024640 /* MapViewControllerOne.swift in Sources */,
 				A05DE66C261FC4D300BCABAA /* Location.swift in Sources */,
+				A064D60C2641AC040089B3F2 /* infoScreen.swift in Sources */,
 				A049470D25BA41CA0019E566 /* AppDelegate.swift in Sources */,
 				A09310CE25DC37400056D206 /* ViewController5.swift in Sources */,
 				A05DE664261FBB2800BCABAA /* IncidentLocationView.swift in Sources */,

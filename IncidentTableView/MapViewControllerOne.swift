@@ -53,7 +53,7 @@ class MapViewControllerOne: UIViewController {
                 self.defaults.setValue(location.pos.x, forKey: "defaultsX")
                 self.defaults.setValue(location.pos.y, forKey: "defaultsY")
                 self.defaults.setValue(dotLocation, forKey: "locationName")
-                print("NAME: \(self.defaults.string(forKey: "locationName"))")
+              //  print("NAME: \(self.defaults.string(forKey: "locationName"))")
                 self.defaults.setValue(true, forKey: "fromFirstReport")
                 
                 self.currentIncident.submit()
@@ -73,8 +73,7 @@ class MapViewControllerOne: UIViewController {
             defaults.setValue(location.pos.x, forKey: "defaultsX")
             defaults.setValue(location.pos.y, forKey: "defaultsY")
             self.defaults.setValue(dotLocation, forKey: "locationName")
-            print("NAME: \(self.defaults.string(forKey: "locationName"))")
-           
+        
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
                self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
