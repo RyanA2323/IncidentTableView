@@ -44,6 +44,10 @@ class MapViewControllerOne: UIViewController {
         image.setLocation(location);
         
         let dotLocation: String = pointToRoom(x: location.pos.x, y: location.pos.y)
+        print(dotLocation)
+        
+        currentIncident.location = dotLocation
+        
         let alert = UIAlertController(title: "Submit?", message: "Location: \(self.location)", preferredStyle: .alert)
         //-------------------------------------
         
@@ -52,8 +56,7 @@ class MapViewControllerOne: UIViewController {
                 
                 self.defaults.setValue(location.pos.x, forKey: "defaultsX")
                 self.defaults.setValue(location.pos.y, forKey: "defaultsY")
-                self.defaults.setValue(dotLocation, forKey: "locationName")
-              //  print("NAME: \(self.defaults.string(forKey: "locationName"))")
+        
                 self.defaults.setValue(true, forKey: "fromFirstReport")
                 
                 self.currentIncident.submit()

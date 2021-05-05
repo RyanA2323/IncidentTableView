@@ -56,6 +56,7 @@ class Incident{
                 // Creating an Incident from the Button Screen provides a default subInfo document with location data
                 ref = db.collection("incidents").document(ref!.documentID).collection("subInformation").addDocument(data: [
                     "info": "N/A",
+                    "location": self.location ?? "NULL LOCATION",
                     "pointx": self.pointx ?? 0,
                     "pointy": self.pointy ?? 0,
                     "time": Timestamp()

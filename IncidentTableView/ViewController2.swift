@@ -38,6 +38,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func startListen() {
+        
+        var safeArray: [Incident] = []
+        
         incidentListener = db.collection("incidents").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -83,11 +86,24 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let dateCompare = Date(timeIntervalSinceNow: -604800)
                     let timeCompare = Timestamp(date: dateCompare)
                     
-                    if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
-                        self.incidents.append(incidentMade)
+                    if (incidentMade.timeCreated != nil) {
+                        if (incidentMade.timeCreated!.dateValue() > timeCompare.dateValue()) {
+                            self.incidents.append(incidentMade)
+                        }
                     }
                 }
             }
+            
+            // DOUBLE CHECKS any time values that are nil, removes them from array
+            var index = 0
+            for incident in self.incidents {
+                if(incident.timeCreated == nil){
+                    self.incidents.remove(at: index)
+                    print("Nil value detected in timeCreated!")
+                }
+                index += 1
+            }
+            
             print(self.incidents.count)
             
             self.incidents.sort(by: {$0.timeCreated!.dateValue() > $1.timeCreated!.dateValue()} )
@@ -108,10 +124,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- 
+        
         if (segue.identifier == "toVC3") {
-        let nvc = segue.destination as! ViewController3
-        nvc.incType = incident
+            let nvc = segue.destination as! ViewController3
+            nvc.incType = incident
         }
     }
     
