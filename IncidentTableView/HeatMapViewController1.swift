@@ -26,7 +26,7 @@ class HeatMapViewController1: UIViewController {
             incidentLabel.text = "For Incident: \(defaults.value(forKey: "typeIncHeatMap")!)"
             
             // Changing the floor parameter between 1 and 2 will automatically switch the image.
-            let DUMMY_LOCATION = Location(pos: CGPoint(x: 0.3, y: 0.7), floor: 2);
+            let DUMMY_LOCATION = Location(pos: CGPoint(x: 0.3, y: 0.7), floor: 1);
             incidentLocationView.setLocation(DUMMY_LOCATION);
         }
     }
