@@ -78,7 +78,7 @@ class MapViewControllerOne: UIViewController {
             self.defaults.setValue(dotLocation, forKey: "locationName")
         
             let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
-               self.performSegue(withIdentifier: "unwindVC4", sender: nil)
+             //  self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
             
         }
@@ -149,6 +149,15 @@ class MapViewControllerOne: UIViewController {
         }
         if (xDouble >= 0.185 && xDouble <= 0.424 && yDouble >= 0.819 && yDouble <= 0.835) {
             location = "Chem Hallway"
+        }
+        if (xDouble >= 0.555 && xDouble <= 0.978 && yDouble >= 0.665 && yDouble <= 1.0) {
+            location = "Falculty Parking Lot"
+        }
+        if (xDouble >= 0.913 && xDouble <= 0.968 && yDouble >= 0.464 && yDouble <= 0.653) {
+            location = "Girls Locker Room"
+        }
+        if (xDouble >= 0.568 && xDouble <= 0.590 && yDouble >= 0.072 && yDouble <= 0.423) {
+            location = "Bus Hallway"
         }
         return location
     }
