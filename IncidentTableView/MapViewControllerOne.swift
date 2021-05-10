@@ -32,6 +32,18 @@ class MapViewControllerOne: UIViewController {
         print("unwinding to first floor")
     }
     
+    
+    @IBAction func parkingAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toParking1", sender: nil)
+    }
+    
+    
+    @IBAction func nextFloorAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "2ndFloor", sender: nil)
+    }
+    
+    
+    
     @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
         print("TAPPED")
         let recog = sender
