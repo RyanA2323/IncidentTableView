@@ -55,11 +55,12 @@ class HeatMapViewController1: UIViewController {
                         let pointAdd = CGPoint(x: incidentMade.pointx ?? 0, y: incidentMade.pointy ?? 0)
                         pointArray.append(pointAdd)
                     }
-                    
+                    var locations: [Location] = []
                     for point in pointArray {
-                        let locationDisplay = Location(pos: point, floor: 1)
-                        self.incidentLocationView.setLocation(locationDisplay)
+                        locations.append(Location(pos: point, floor: 1));
                     }
+                    self.incidentLocationView.showFloor(1);
+                    self.incidentLocationView.addLocations(locations)
                     
                     // Changing the floor parameter between 1 and 2 will automatically switch the image.
                     // let DUMMY_LOCATION = Location(pos: CGPoint(x: 0.3, y: 0.7), floor: 2);

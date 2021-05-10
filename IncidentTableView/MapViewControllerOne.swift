@@ -57,7 +57,8 @@ class MapViewControllerOne: UIViewController {
         currentIncident.pointy = location.pos.y
         print(location.pos.x)
         print(location.pos.y)
-        image.setLocation(location);
+        image.clearLocations();
+        image.addLocation(location);
         
         let dotLocation: String = pointToRoom(x: location.pos.x, y: location.pos.y)
         print(dotLocation)
