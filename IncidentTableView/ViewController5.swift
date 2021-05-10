@@ -97,10 +97,6 @@ class ViewController5: UIViewController {
         }
     }
     
-    @IBAction func unwindVC5(_ seg: UIStoryboardSegue ) {
-        print("unwinding to first floor")
-    }
-    
     
     func runAlert2() {
         let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
