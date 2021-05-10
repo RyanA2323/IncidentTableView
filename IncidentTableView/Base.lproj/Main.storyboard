@@ -209,7 +209,7 @@
             <objects>
                 <viewController id="Qxz-93-q8B" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y7T-uU-6WU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parkingLotz" translatesAutoresizingMaskIntoConstraints="NO" id="2da-9x-TL9">
@@ -220,6 +220,7 @@
                         <viewLayoutGuide key="safeArea" id="OXc-Jb-G7s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ggP-Oa-Qpx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leI-6F-fwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,22 +303,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB6-7v-T8r">
-                                <rect key="frame" x="329" y="6" width="79" height="48"/>
+                                <rect key="frame" x="321" y="6" width="87" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.59025013449999997" green="0.65541255470000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
                                 <state key="normal" title="See Parking">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="parkingAction:" destination="CN1-M6-0kG" eventType="touchUpInside" id="pCC-QV-hKN"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Floor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-ks-roX">
-                                <rect key="frame" x="243" y="653" width="155" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYX-Do-j6j">
+                                <rect key="frame" x="243" y="658" width="151" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.59025013449999997" green="0.65541255470000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <state key="normal" title="Next Floor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextFloorAction:" destination="CN1-M6-0kG" eventType="touchUpInside" id="lgo-D0-I8T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMl-8u-gpA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -337,6 +345,7 @@
                         <segue destination="Xlh-7e-n3b" kind="unwind" identifier="unwindVC4" unwindAction="unwindVC4:" id="guD-mE-dV6"/>
                         <segue destination="l1B-HE-OFo" kind="show" identifier="toVC4fromVC5" id="HUN-uZ-Obl"/>
                         <segue destination="7nq-gC-QTc" kind="show" identifier="2ndFloor" id="aRV-0y-Bjc"/>
+                        <segue destination="Qxz-93-q8B" kind="show" identifier="toParking1" id="4M5-yj-HYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMg-yo-04L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
