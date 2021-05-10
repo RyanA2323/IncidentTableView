@@ -349,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="3563.7681159420295" y="-704.34782608695662"/>
         </scene>
-        <!--Map View Controller Two-->
+        <!--Map View Controller2-->
         <scene sceneID="bpV-3a-p8l">
             <objects>
-                <viewController id="7nq-gC-QTc" customClass="MapViewControllerTwo" sceneMemberID="viewController">
+                <viewController id="7nq-gC-QTc" customClass="MapViewController2" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CpX-ZW-zrs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
