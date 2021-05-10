@@ -33,9 +33,13 @@ class MapViewControllerOne: UIViewController {
     }
     
     @IBAction func onTapped(_ sender: UITapGestureRecognizer) {
+        print("TAPPED")
         let recog = sender
         let pos = recog.location(in: image);
         let location = Location(pos: normalize(pos), floor: 1);
+        if (Double(location.pos.x) >= 0.587 && Double(location.pos.x) <= 0.961 && Double(location.pos.y) >= 0.912 && Double(location.pos.y) <= 1.02) {
+            performSegue(withIdentifier: "2ndFloor", sender: nil)
+        } else {
         
         currentIncident.pointx = location.pos.x
         currentIncident.pointy = location.pos.y
@@ -78,13 +82,13 @@ class MapViewControllerOne: UIViewController {
             defaults.setValue(location.pos.y, forKey: "defaultsY")
             self.defaults.setValue(dotLocation, forKey: "locationName")
         
-            let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
-             //  self.performSegue(withIdentifier: "unwindVC4", sender: nil)
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+               self.performSegue(withIdentifier: "unwindVC4", sender: nil)
             }
             
         }
         
-        
+        }
     }
     func normalize(_ location: CGPoint) -> CGPoint {
         let frameSize = image.frame.size;
