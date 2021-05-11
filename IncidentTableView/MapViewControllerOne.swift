@@ -65,7 +65,7 @@ class MapViewControllerOne: UIViewController {
         
         currentIncident.location = dotLocation
         
-        let alert = UIAlertController(title: "Submit?", message: "Location: \(self.location)", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Submit?", message: "Incident: \(currentIncident.type.rawValue),  Location: \(self.location)", preferredStyle: .alert)
         //-------------------------------------
         
         if from4Btns == true {
