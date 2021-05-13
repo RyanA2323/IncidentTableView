@@ -176,18 +176,32 @@
             </objects>
             <point key="canvasLocation" x="1845" y="938"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VW1-Tl-Wbb">
+            <objects>
+                <viewController id="IKN-Ty-wGJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hTA-Gt-EWl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zH7-TZ-zXS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPm-hG-uOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="78"/>
+        </scene>
         <!--Login-->
         <scene sceneID="toq-gp-Dwf">
             <objects>
                 <viewController id="u3h-Gj-bgh" customClass="LoginViewController" customModule="IncidentTableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="URT-a3-o0j">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="URT-a3-o0j" customClass="GIDSignInButton">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIa-Dc-vBX">
-                                <rect key="frame" x="130" y="350.66666666666669" width="154" height="35"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIa-Dc-vBX">
+                                <rect key="frame" x="133" y="351" width="148" height="34"/>
                                 <color key="backgroundColor" red="0.41850540510000001" green="0.50857814570000004" blue="1" alpha="0.64308647259999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="Login With Google">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -778,7 +792,7 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="eao-D6-2IS"/>
-        <segue reference="2Hi-lu-GmA"/>
+        <segue reference="OQ7-gx-zyA"/>
         <segue reference="Pfu-Rg-ckc"/>
         <segue reference="ed9-N9-3Wt"/>
     </inferredMetricsTieBreakers>
