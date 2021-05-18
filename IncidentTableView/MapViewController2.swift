@@ -10,11 +10,13 @@ import UIKit
 class MapViewController2: UIViewController {
 
     @IBOutlet var gesture: UITapGestureRecognizer!
+    @IBOutlet weak var image: IncidentLocationView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//comment
-        // Do any additional setup after loading the view.
+        image.addGestureRecognizer(gesture);
+        image.setFloorImages([UIImage(named: "Floor1")!, UIImage(named: "floor2")!]);
     }
     
     

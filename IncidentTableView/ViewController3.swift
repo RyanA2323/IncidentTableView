@@ -20,14 +20,13 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     var currentIncidentKey = "DemoIncident"
     let db = Firestore.firestore()
     var infoListener: ListenerRegistration!
-    
-    var incType: String = ""
-    var clickedIncident = Incident(inc: .other)
+    var rawValue: String = ""
+    //var clickedIncident = Incident(inc: .other)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleOutlet.text = "Additional Information \n Incident: \(incType)"
+        titleOutlet.text = "Additional Information \n Incident: \(rawValue)"
         
         tableview.delegate = self
         tableview.dataSource = self

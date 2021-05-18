@@ -119,7 +119,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defaults.setValue(incidents[indexPath.row].key, forKey: "currentIncidentKey")
-        incident = "\(incidents[indexPath.row].type)"
+        incident = "\(incidents[indexPath.row].type.rawValue)"
+
         performSegue(withIdentifier: "toVC3", sender: nil)
     }
     
@@ -127,7 +128,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         if (segue.identifier == "toVC3") {
             let nvc = segue.destination as! ViewController3
-            nvc.incType = incident
+            nvc.rawValue = incident
         }
     }
     
